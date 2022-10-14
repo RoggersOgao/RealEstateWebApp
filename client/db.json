@@ -1,0 +1,460 @@
+{
+  "listing": [
+    {
+      "id": 1,
+      "username": "Roggers Ogao",
+      "propertyType": "For Rent",
+      "propertyName": "La Villa Escatscheta",
+      "location": "Nairobi",
+      "property": "Apartment",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "price": 25000,
+      "propertySize": 1200,
+      "rating": 4,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus consectetur metus, ac vestibulum turpis pulvinar sed. Nullam bibendum massa metus, ac interdum sapien pulvinar eu. Etiam tincidunt purus a justo blandit fringilla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit ullamcorper feugiat. Sed mi lorem, cursus vehicula pulvinar a, faucibus vel enim. Duis et egestas metus.",
+      "date": "17/5/2022",
+      "img": "/images/bed.jpg",
+      "features": [
+        "pool"
+      ]
+    },
+    {
+      "id": 2,
+      "username": "Chris Kelvin",
+      "propertyType": "For Rent",
+      "propertyName": "Modern Apartments",
+      "location": "Nairobi",
+      "property": "Home",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "price": 24000,
+      "propertySize": 1350,
+      "rating": 4,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus consectetur metus, ac vestibulum turpis pulvinar sed. Nullam bibendum massa metus, ac interdum sapien pulvinar eu. Etiam tincidunt purus a justo blandit fringilla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit ullamcorper feugiat. Sed mi lorem, cursus vehicula pulvinar a, faucibus vel enim. Duis et egestas metus.",
+      "date": "17/5/2022",
+      "img": "/images/chairs.jpg",
+      "features": [
+        "pool",
+        "Laundry Machine",
+        "Spa",
+        "AC & Heating"
+      ]
+    },
+    {
+      "id": 3,
+      "username": "Raphael Morara",
+      "propertyType": "For Sale",
+      "propertyName": "Modern Apartments",
+      "location": "Nairobi",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "price": 6000000,
+      "propertySize": 1350,
+      "rating": 4,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus consectetur metus, ac vestibulum turpis pulvinar sed. Nullam bibendum massa metus, ac interdum sapien pulvinar eu. Etiam tincidunt purus a justo blandit fringilla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit ullamcorper feugiat. Sed mi lorem, cursus vehicula pulvinar a, faucibus vel enim. Duis et egestas metus.",
+      "date": "17/5/2022",
+      "img": "/images/furniture.jpg",
+      "features": [
+        "pool",
+        "Laundry Machine",
+        "Elevator",
+        "Club House"
+      ]
+    },
+    {
+      "id": 4,
+      "username": "Nellyzer Morara",
+      "propertyType": "For Sale",
+      "propertyName": "Modern Apartments",
+      "location": "Nairobi",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "price": 6000000,
+      "propertySize": 1350,
+      "rating": 4,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus consectetur metus, ac vestibulum turpis pulvinar sed. Nullam bibendum massa metus, ac interdum sapien pulvinar eu. Etiam tincidunt purus a justo blandit fringilla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit ullamcorper feugiat. Sed mi lorem, cursus vehicula pulvinar a, faucibus vel enim. Duis et egestas metus.",
+      "date": "17/5/2022",
+      "img": "/images/house.jpg",
+      "features": [
+        "pool",
+        "Spa",
+        "AC & Heating",
+        "Elevator",
+        "Club House"
+      ]
+    },
+    {
+      "id": 5,
+      "username": "Valary Kinyua",
+      "propertyType": "For Sale",
+      "propertyName": "Modern Apartments",
+      "location": "Nairobi",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "price": 6000000,
+      "propertySize": 1350,
+      "rating": 4,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus consectetur metus, ac vestibulum turpis pulvinar sed. Nullam bibendum massa metus, ac interdum sapien pulvinar eu. Etiam tincidunt purus a justo blandit fringilla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit ullamcorper feugiat. Sed mi lorem, cursus vehicula pulvinar a, faucibus vel enim. Duis et egestas metus.",
+      "date": "17/5/2022",
+      "img": "/images/livingRoom.jpg",
+      "features": [
+        "Elevator",
+        "Club House"
+      ]
+    },
+    {
+      "id": 6,
+      "username": "Sharon Muthoni",
+      "propertyType": "For Sale",
+      "propertyName": "Modern Apartments",
+      "location": "Nairobi",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "price": 6000000,
+      "propertySize": 1350,
+      "rating": 4,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus consectetur metus, ac vestibulum turpis pulvinar sed. Nullam bibendum massa metus, ac interdum sapien pulvinar eu. Etiam tincidunt purus a justo blandit fringilla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit ullamcorper feugiat. Sed mi lorem, cursus vehicula pulvinar a, faucibus vel enim. Duis et egestas metus.",
+      "date": "17/5/2022",
+      "img": "/images/mountains.jpg",
+      "features": [
+        "pool",
+        "Elevator",
+        "Club House"
+      ]
+    },
+    {
+      "id": 7,
+      "username": "Jasmine Ali",
+      "propertyType": "For Rent",
+      "propertyName": "Modern Apartments",
+      "location": "Nairobi",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "price": 60000,
+      "propertySize": 1350,
+      "rating": 4,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus consectetur metus, ac vestibulum turpis pulvinar sed. Nullam bibendum massa metus, ac interdum sapien pulvinar eu. Etiam tincidunt purus a justo blandit fringilla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit ullamcorper feugiat. Sed mi lorem, cursus vehicula pulvinar a, faucibus vel enim. Duis et egestas metus.",
+      "date": "17/5/2022",
+      "img": "/images/bed.jpg",
+      "features": [
+        "Elevator",
+        "Club House",
+        "parking"
+      ]
+    },
+    {
+      "id": 8,
+      "username": "Raphael Morara",
+      "propertyType": "For Sale",
+      "propertyName": "Modern Apartments",
+      "location": "Nairobi",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "price": 6000000,
+      "propertySize": 1350,
+      "rating": 4,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus consectetur metus, ac vestibulum turpis pulvinar sed. Nullam bibendum massa metus, ac interdum sapien pulvinar eu. Etiam tincidunt purus a justo blandit fringilla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit ullamcorper feugiat. Sed mi lorem, cursus vehicula pulvinar a, faucibus vel enim. Duis et egestas metus.",
+      "date": "17/5/2022",
+      "img": "/images/furniture.jpg",
+      "features": [
+        "pool",
+        "Laundry Machine",
+        "Club House"
+      ]
+    },
+    {
+      "id": 9,
+      "username": "Nellyzer Morara",
+      "propertyType": "For Sale",
+      "propertyName": "Modern Apartments",
+      "location": "Nairobi",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "price": 6000000,
+      "propertySize": 1350,
+      "rating": 4,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus consectetur metus, ac vestibulum turpis pulvinar sed. Nullam bibendum massa metus, ac interdum sapien pulvinar eu. Etiam tincidunt purus a justo blandit fringilla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit ullamcorper feugiat. Sed mi lorem, cursus vehicula pulvinar a, faucibus vel enim. Duis et egestas metus.",
+      "date": "17/5/2022",
+      "img": "/images/house.jpg",
+      "features": [
+        "pool",
+        "Laundry Machine",
+        "Spa",
+        "AC & Heating"
+      ]
+    },
+    {
+      "id": 10,
+      "username": "Valary Kinyua",
+      "propertyType": "For Sale",
+      "propertyName": "Modern Apartments",
+      "location": "Nairobi",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "price": 6000000,
+      "propertySize": 1350,
+      "rating": 4,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus consectetur metus, ac vestibulum turpis pulvinar sed. Nullam bibendum massa metus, ac interdum sapien pulvinar eu. Etiam tincidunt purus a justo blandit fringilla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit ullamcorper feugiat. Sed mi lorem, cursus vehicula pulvinar a, faucibus vel enim. Duis et egestas metus.",
+      "date": "17/5/2022",
+      "img": "/images/livingRoom.jpg",
+      "features": [
+        "pool",
+        "Laundry Machine",
+        "Elevator",
+        "Club House"
+      ]
+    },
+    {
+      "id": 11,
+      "username": "Sharon Muthoni",
+      "propertyType": "For Sale",
+      "propertyName": "Modern Apartments",
+      "location": "Nairobi",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "price": 6000000,
+      "propertySize": 1350,
+      "rating": 4,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus consectetur metus, ac vestibulum turpis pulvinar sed. Nullam bibendum massa metus, ac interdum sapien pulvinar eu. Etiam tincidunt purus a justo blandit fringilla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit ullamcorper feugiat. Sed mi lorem, cursus vehicula pulvinar a, faucibus vel enim. Duis et egestas metus.",
+      "date": "17/5/2022",
+      "img": "/images/mountains.jpg",
+      "features": [
+        "pool",
+        "Laundry Machine",
+        "Elevator",
+        "Club House"
+      ]
+    },
+    {
+      "id": 12,
+      "username": "Jasmine Ali",
+      "propertyType": "For Rent",
+      "propertyName": "Modern Apartments",
+      "location": "Nairobi",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "price": 60000,
+      "propertySize": 1350,
+      "rating": 4,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus consectetur metus, ac vestibulum turpis pulvinar sed. Nullam bibendum massa metus, ac interdum sapien pulvinar eu. Etiam tincidunt purus a justo blandit fringilla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit ullamcorper feugiat. Sed mi lorem, cursus vehicula pulvinar a, faucibus vel enim. Duis et egestas metus.",
+      "date": "17/5/2022",
+      "img": "/images/bed.jpg",
+      "features": [
+        "Spa",
+        "AC & Heating",
+        "Elevator",
+        "Club House",
+        "parking"
+      ]
+    },
+    {
+      "id": 13,
+      "username": "Roggers Ogao",
+      "propertyType": "For Rent",
+      "propertyName": "La Villa Escatscheta",
+      "location": "Nairobi",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "price": 25000,
+      "propertySize": 1200,
+      "rating": 4,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus consectetur metus, ac vestibulum turpis pulvinar sed. Nullam bibendum massa metus, ac interdum sapien pulvinar eu. Etiam tincidunt purus a justo blandit fringilla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit ullamcorper feugiat. Sed mi lorem, cursus vehicula pulvinar a, faucibus vel enim. Duis et egestas metus.",
+      "date": "17/5/2022",
+      "img": "/images/bed.jpg",
+      "features": [
+        "pool",
+        "Laundry Machine",
+        "Spa",
+        "AC & Heating",
+        "Elevator",
+        "Club House"
+      ]
+    },
+    {
+      "id": 14,
+      "username": "Chris Kelvin",
+      "propertyType": "For Rent",
+      "propertyName": "Modern Apartments",
+      "location": "Nairobi",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "price": 24000,
+      "propertySize": 1350,
+      "rating": 4,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus consectetur metus, ac vestibulum turpis pulvinar sed. Nullam bibendum massa metus, ac interdum sapien pulvinar eu. Etiam tincidunt purus a justo blandit fringilla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit ullamcorper feugiat. Sed mi lorem, cursus vehicula pulvinar a, faucibus vel enim. Duis et egestas metus.",
+      "date": "17/5/2022",
+      "img": "/images/chairs.jpg",
+      "features": [
+        "pool",
+        "Laundry Machine",
+        "Spa",
+        "AC & Heating"
+      ]
+    },
+    {
+      "id": 15,
+      "username": "Raphael Morara",
+      "propertyType": "For Sale",
+      "propertyName": "Modern Apartments",
+      "location": "Nairobi",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "price": 6000000,
+      "propertySize": 1350,
+      "rating": 4,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus consectetur metus, ac vestibulum turpis pulvinar sed. Nullam bibendum massa metus, ac interdum sapien pulvinar eu. Etiam tincidunt purus a justo blandit fringilla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit ullamcorper feugiat. Sed mi lorem, cursus vehicula pulvinar a, faucibus vel enim. Duis et egestas metus.",
+      "date": "17/5/2022",
+      "img": "/images/furniture.jpg",
+      "features": [
+        "Spa",
+        "AC & Heating",
+        "Elevator",
+        "Club House",
+        "parking"
+      ]
+    },
+    {
+      "id": 16,
+      "username": "Nellyzer Morara",
+      "propertyType": "For Sale",
+      "propertyName": "Modern Apartments",
+      "location": "Nairobi",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "price": 6000000,
+      "propertySize": 1350,
+      "rating": 4,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus consectetur metus, ac vestibulum turpis pulvinar sed. Nullam bibendum massa metus, ac interdum sapien pulvinar eu. Etiam tincidunt purus a justo blandit fringilla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit ullamcorper feugiat. Sed mi lorem, cursus vehicula pulvinar a, faucibus vel enim. Duis et egestas metus.",
+      "date": "17/5/2022",
+      "img": "/images/house.jpg",
+      "features": [
+        "Club House"
+      ]
+    },
+    {
+      "id": 17,
+      "username": "Valary Kinyua",
+      "propertyType": "For Sale",
+      "propertyName": "Modern Apartments",
+      "location": "Nairobi",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "price": 6000000,
+      "propertySize": 1350,
+      "rating": 4,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus consectetur metus, ac vestibulum turpis pulvinar sed. Nullam bibendum massa metus, ac interdum sapien pulvinar eu. Etiam tincidunt purus a justo blandit fringilla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit ullamcorper feugiat. Sed mi lorem, cursus vehicula pulvinar a, faucibus vel enim. Duis et egestas metus.",
+      "date": "17/5/2022",
+      "img": "/images/livingRoom.jpg",
+      "features": [
+        "pool",
+        "Club House"
+      ]
+    },
+    {
+      "id": 18,
+      "username": "Sharon Muthoni",
+      "propertyType": "For Sale",
+      "propertyName": "Modern Apartments",
+      "location": "Nairobi",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "price": 6000000,
+      "propertySize": 1350,
+      "rating": 4,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus consectetur metus, ac vestibulum turpis pulvinar sed. Nullam bibendum massa metus, ac interdum sapien pulvinar eu. Etiam tincidunt purus a justo blandit fringilla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit ullamcorper feugiat. Sed mi lorem, cursus vehicula pulvinar a, faucibus vel enim. Duis et egestas metus.",
+      "date": "17/5/2022",
+      "img": "/images/mountains.jpg",
+      "features": [
+        "Laundry Machine",
+        "Spa"
+      ]
+    },
+    {
+      "id": 19,
+      "username": "Jasmine Ali",
+      "propertyType": "For Rent",
+      "propertyName": "Modern Apartments",
+      "location": "Nairobi",
+      "bedrooms": 2,
+      "property": "Condominium",
+      "bathrooms": 1,
+      "price": 60000,
+      "propertySize": 1350,
+      "rating": 4,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus consectetur metus, ac vestibulum turpis pulvinar sed. Nullam bibendum massa metus, ac interdum sapien pulvinar eu. Etiam tincidunt purus a justo blandit fringilla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit ullamcorper feugiat. Sed mi lorem, cursus vehicula pulvinar a, faucibus vel enim. Duis et egestas metus.",
+      "date": "17/5/2022",
+      "img": "/images/bed.jpg",
+      "features": [
+        "pool",
+        "Laundry Machine",
+        "Spa",
+        "parking"
+      ]
+    },
+    {
+      "id": 20,
+      "username": "Raphael Morara",
+      "propertyType": "For Sale",
+      "propertyName": "Modern Apartments",
+      "property": "Office",
+      "location": "Nairobi",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "price": 6000000,
+      "propertySize": 1350,
+      "rating": 4,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus consectetur metus, ac vestibulum turpis pulvinar sed. Nullam bibendum massa metus, ac interdum sapien pulvinar eu. Etiam tincidunt purus a justo blandit fringilla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit ullamcorper feugiat. Sed mi lorem, cursus vehicula pulvinar a, faucibus vel enim. Duis et egestas metus.",
+      "date": "17/5/2022",
+      "img": "/images/furniture.jpg",
+      "features": [
+        "Spa",
+        "AC & Heating"
+      ]
+    },
+    {
+      "id": 21,
+      "username": "Nellyzer Morara",
+      "propertyType": "For Sale",
+      "propertyName": "Modern Apartments",
+      "location": "Kikuyu",
+      "property": "Apartment",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "price": 6000000,
+      "propertySize": 1350,
+      "rating": 4,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus consectetur metus, ac vestibulum turpis pulvinar sed. Nullam bibendum massa metus, ac interdum sapien pulvinar eu. Etiam tincidunt purus a justo blandit fringilla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit ullamcorper feugiat. Sed mi lorem, cursus vehicula pulvinar a, faucibus vel enim. Duis et egestas metus.",
+      "date": "17/5/2022",
+      "img": "/images/house.jpg",
+      "features": [
+        "pool",
+        "Laundry Machine",
+        "Spa",
+        "AC & Heating"
+      ]
+    }
+  ],
+  "register": [
+    {
+      "username": "Roggers Ogao",
+      "email": "roggersog@gmail.com",
+      "nationalId": "36173456",
+      "phoneNumber": "070060885",
+      "otherNumber": "+254567343245",
+      "password": "password",
+      "isAdmin": false,
+      "id": 1
+    },
+    {
+      "username": "Raphael Morara",
+      "email": "raphael@gmail.com",
+      "nationalId": "34567324",
+      "phoneNumber": "0786453245",
+      "otherNumber": "0767891543",
+      "password": "password",
+      "isAdmin": false,
+      "id": 2
+    }
+  ]
+}

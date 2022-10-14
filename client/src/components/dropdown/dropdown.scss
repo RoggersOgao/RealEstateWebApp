@@ -1,0 +1,77 @@
+@import "../../sass/main.scss";
+.container{
+    position:relative;
+    .dropdownContainer{
+        cursor:pointer;
+        width:34rem;
+        margin:2rem 0 1rem 0;
+        padding:.9rem;
+        border:.3px solid $borderGrey;
+        z-index:1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size:1.4rem;
+        color:grey;
+        background-color: transparent;
+
+        .cont{
+            display: flex;
+            align-items: flex-end;
+            gap:1rem;
+            img{
+                height: 2rem;
+                background-size: cover;
+            }
+        }
+
+        .iconCont{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .dropdownlist{
+        animation: moveInFromUp .4s ease-in-out;
+        max-height: 28rem;   
+        border:.3px solid $borderGrey;
+        position: absolute;
+        top:7.3rem;
+        left:-.15rem;
+        cursor:pointer;
+        z-index:2;
+        overflow-y:scroll;
+        width:34.5rem;
+        
+        
+        .listItem{
+            z-index: 1001;
+            padding:1rem;
+            list-style-type:none;
+            background-color: $altBodyColor;
+            display: flex;
+            align-items: center;
+            font-size:1.5rem;
+            gap:1rem;
+            color:white;
+            
+            
+
+            &:hover{
+                background-color: $primaryColor;
+                color:white;
+            }
+        }
+    }
+
+}
+
+@keyframes moveInFromUp {
+    0%{
+        opacity:0;
+        transform: translateY(-6rem);
+    }
+    100%{
+        opacity:1;
+        transform: translate(0);
+    }
+}

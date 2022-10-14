@@ -1,0 +1,617 @@
+@import "../../../sass/main.scss";
+
+.listingForm{
+margin-top:9rem;
+    .form{
+        width:60%;
+        margin:0 auto;
+        background-color: $altBodyColor;
+        padding:5rem;
+        border-left:3px solid $primaryColor;
+        border-radius: 1rem;
+
+        @include respond(tab-land){
+            width:90%;
+        }
+        @include respond(tab-port){
+            width:90%;
+            padding:2rem;
+        }
+        @include respond(phone){
+            width:95%;
+            padding:2rem;
+        }
+        .radioGroup{
+            display: flex;
+            flex-direction: column;
+            width:28rem;
+            justify-content: center;
+            padding-bottom:3.4rem;
+            label{
+                display: block;
+                font-size:1.5rem;
+                color:white;
+                font-weight: bold;
+                cursor:pointer;
+
+                span{
+                    color:$primaryColor;
+                }
+                
+            }
+            .title{
+                padding-bottom:2rem;
+            }
+
+            .groups{
+                display: flex;
+                column-gap: 4.6rem;
+                &--group1{
+                    .inputRadioS{
+                    display:none;
+                    }
+                    .inputRadioS:checked ~ label{
+                        background-color: $primaryColor;
+                    }
+                }
+                &--group2{
+                    .inputRadioR{
+                        display:none;
+                    }
+                    .inputRadioR:checked ~ label{
+                        background-color: $primaryColor;
+                    }
+                }
+            }
+            
+            
+            
+            
+            .sell{
+                width:14.7rem;
+                height: 4.87rem;
+                border:.3px solid $borderGrey;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .rent{
+                width:14.7rem;
+                height: 4.87rem;
+                border:.3px solid $borderGrey;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        .nameLocationGroup{
+            display: flex;
+            justify-content: space-between;
+
+            @include respond(tab-port){
+                flex-direction: column;
+            }
+            .formgroup{
+                display: flex;
+                flex-direction: column;
+                label{
+                    font-size:1.5rem;
+                    color:white;
+                    font-weight: bold;
+                    padding-bottom:2rem;
+                    display: flex;
+                    align-items: center;
+                    gap:1rem;
+                    span{
+                        color:$primaryColor;
+                    }
+    
+                    img{
+                        width:1.7rem;
+                        background-size: cover;
+                    }
+                }
+                .locationDrop{
+                    padding-bottom: 0;
+                }
+                input{
+                    background-color: $altBodyColor;
+                    border:.3px solid $borderGrey;
+                    width:34rem;
+                    padding:1.3rem;
+                    font-size:1.4rem;
+                    color:$grey;
+
+                    &:active,&:focus{
+                        outline:none;
+                    }
+                }
+                padding-bottom:3.4rem;
+            }
+        }
+
+        .typeOfPropertyFormGroup{
+
+            .title{
+                font-size:1.4rem;
+                color:white;
+                font-weight: bold;
+                padding-bottom: 2rem;
+
+                span{
+                    color:$primaryColor;
+                }
+            }
+            .icons{
+                display: flex;
+            
+                width:80%;
+                margin:2rem auto;
+                justify-content: space-between;
+                text-align: center;
+
+                @include respond(tab-land){
+                    width:90%;
+                }
+                @include respond(tab-port){
+                    width:70%;
+                }
+                @include respond(phone){
+                    width:95%;
+                    margin-top:15rem;
+                }
+                .group{
+                    position:relative;
+                    &__icon{
+                        display: flex;
+                        
+                        .imgIcons--first{
+
+                            height:9.9rem;
+                            background-size:cover;
+                            @include respond(tab-port){
+                                height:6.9rem;
+                            }
+                            @include respond(phone){
+                                height: 6rem;
+                            }
+                        }
+                        .imgIcons{
+                            height:9.9rem;
+                            padding-left:4.5rem;
+                            border-left:.3px solid $borderGrey;
+                            background-size:cover;
+
+                            @include respond(tab-port){
+                                height:6.9rem;
+                                padding-left:2.5rem;
+                            }
+                            @include respond(phone){
+                                height: 6rem;
+                                padding-left:3rem;
+                            }
+                        }
+                        
+                    }
+                    &__text{
+                        padding:2rem 0 ;
+                        font-size:1.4rem;
+                        color:$grey;
+                        transform: translateX(1.4rem);
+
+                        @include respond(phone){
+                            transform: translateX(1.5rem)
+                        }
+                    }
+                    &__text--first{
+                        padding:2rem 0 ;
+                        font-size:1.4rem;
+                        color:$grey;
+                    }
+
+                    input{
+                        display:none;
+                    }
+                    input[type=radio]:checked ~ label{
+                        background-color: $primaryColor ;
+                    }
+                    label{
+                        cursor: pointer;
+                        position:absolute;
+                        width:3rem;
+                        height: 3rem;
+                        border-radius: 50%;
+                        border:.3px solid $borderGrey;
+                        display: flex;
+                    }
+                    .label1{
+                        left:3.5rem;
+                        @include respond(tab-land){
+                            left:3.5rem;
+                        }
+                    }
+                    .label2{
+                        left:7rem;
+                        @include respond(tab-land){
+                            left:7rem;
+                        }
+                        @include respond(tab-port){
+                            left:4rem;
+                        }
+                        @include respond(phone){
+                            left:4.2rem;
+                        }
+                    }
+                    .label3{
+                        left:8.5rem;
+                        @include respond(tab-land){
+                            left:9rem;
+                        }
+                        @include respond(tab-port){
+                            left:6rem;
+                        }
+                        @include respond(phone){
+                            left:5.5rem;
+                        }
+                    }
+                    .label4{
+                        right:6rem;
+                        @include respond(tab-land){
+                            left:10rem;
+                        }
+                        @include respond(tab-port){
+                            left:3.5rem;
+                        }
+                        @include respond(phone){
+                            right:3rem;
+                        }
+                    }
+
+
+                }
+                
+            }
+        }
+
+
+        .descriptionFormGroup{
+            margin-top: 7rem;
+            label{
+                font-size:1.4rem;
+                color:white;
+                font-weight: bold;
+
+                span{
+                    color:$primaryColor;
+                }
+                
+            }
+            textarea{
+                margin-top: 2rem;
+                width:100%;
+                padding:1rem 2rem;
+                color:$lightGrey;
+                border-radius: 1rem;
+                background-color:$altBodyColor;
+                border:.3px solid $borderGrey;
+                &:focus,&:active{
+                    outline:none;
+                }
+            }
+        }
+
+
+
+        .othersGroup{
+            margin-top: 4rem;
+            display: flex;
+            justify-content: space-between;
+
+            @include respond(tab-port){
+                flex-direction: column;
+            }
+
+            .left{
+                flex:1;
+                label{
+
+                    font-size:1.4rem;
+                    color:white;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    gap:1rem;
+                    padding:2rem 0 2rem 0;
+                    span{
+                        color:$primaryColor;
+                    }
+                    img{
+                        width:1.7rem;
+                        background-size: cover;
+                    }
+                }
+                input{
+                    background-color: $altBodyColor;
+                    border:.3px solid $borderGrey;
+                    width:34rem;
+                    padding:1.3rem;
+                    font-size:1.4rem;
+                    color:$grey;
+
+                }
+                input[type=number]::-webkit-inner-spin-button,
+                input[type=number]::-webkit-outer-spin-button { 
+                    -webkit-appearance: none; 
+                    margin: 0; 
+                }
+                input[type=number] { 
+                    -moz-appearance: textfield;
+                    appearance: textfield;
+                    margin: 0; 
+
+                    &:active,&:focus{
+                        outline:none;
+                    }
+                }
+                // .bedroomsGroup{
+                    
+                // }
+            }
+            .right{
+                flex:1;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: space-between;
+
+                @include respond(tab-port){
+                    align-items: flex-start;
+                }
+                .addressFormgroup{
+                    
+                    justify-self: start;
+                    label{
+                        padding:2rem 0;
+                        display: flex;
+                        align-items: center;
+                        gap:1rem;
+                        font-size:1.4rem;
+                        color:white;
+                        font-weight: bold;
+
+                        span{
+                            color:$primaryColor;
+                        }
+                        img{
+                            width:1.6rem;
+                            background-size: cover;
+                        }
+                    }
+
+                    textarea{
+                        width:34rem;
+                        margin-left: auto;
+                        background-color: $altBodyColor;
+                        border:.3px solid $borderGrey;
+                        height: 15.2rem;
+                        color:$lightGrey;
+                        padding:1rem 1.5rem;
+                        border-radius: .8rem;
+
+                        &:active,&:focus{
+                            outline:none; 
+                        }
+                    }
+                }
+
+                .offerGroup{
+                   width:34rem;
+                   justify-self: end;
+                    .title{
+                        padding:2rem 0;
+                        display: flex;
+                        align-items: center;
+                        gap:1rem;
+                        font-size:1.4rem;
+                        color:white;
+                        font-weight: bold;
+
+                        span{
+                            color:$primaryColor;
+                        }
+                        img{
+                            width:1.6rem;
+                            background-size: cover;
+                        }
+                    }
+
+                    .groups{
+
+                        label{
+                            font-size:1.4rem;
+                            font-weight: bold;
+                            color:White;
+
+                            span{
+                                color:$primaryColor;
+                            }
+                        }
+
+                        display: flex;
+                        justify-content:space-between;
+                        &--group1{
+                            input[type=radio]{
+                                display:none;
+                            }
+                            input[type=radio]:checked + .yes{
+                                background-color:$primaryColor;
+                            }
+                            .yes{
+                                width:14.7rem;
+                                height: 4.87rem;
+                                border:.3px solid $borderGrey;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                cursor:pointer;
+                            }
+                            
+                        }
+
+                        &--group2{
+                            input[type=radio]{
+                                display:none;
+                            }
+                            input[type=radio]:checked + .no{
+                                background-color:$primaryColor;
+                            }
+                            .no{
+                                width:14.7rem;
+                                height: 4.87rem;
+                                border:.3px solid $borderGrey;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                cursor:pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .featuresGroup{
+            display: flex;
+            label{
+                font-size:1.4rem;
+                color:$grey;
+                
+            }
+            .left{
+                flex:1;
+                .title{
+                    font-size:1.4rem;
+                    font-weight: bold;
+                    color:white;
+
+                    span{
+                        color:$primaryColor;
+
+                    }
+                }
+                
+                
+            }
+            .formgroup{
+                
+                
+                .featuresGroupC{
+                    .groupCheck{
+                        display: flex;
+                        align-items: center;
+                        gap:1.5rem;
+                        margin-top: 2rem;
+                        
+                        input[type=checkbox]:checked ~ .poolBox{
+                            background: $primaryColor;
+                        }
+                        .poolBox{
+                            width: 2.4rem;
+                            height: 2.4rem;
+                            border:.3px solid $grey;
+                            cursor:pointer;
+    
+                        }
+                        .poolText{
+                            color:$grey;
+                            cursor:pointer;
+                        }
+                        input[type=checkbox]{
+                            display:none;
+                        }
+                        
+                    }
+                }
+            }
+            .left{
+                flex:1;
+                margin-top: 2rem;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+            }
+            .middle{
+                flex:1;
+                margin-top: 3.65rem;
+                display: flex;
+                justify-content: center;
+            }
+            .right{
+                flex:1;
+                margin-top: 3.65rem;
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        .imagesGroup{
+margin-top: 2rem;
+            label{
+                font-size:1.4rem;
+            }
+            .file{
+                display: flex;
+                align-items: center;
+                color:white;
+                font-weight: bold;
+                gap:1rem;
+                span{
+                    color:$primaryColor;
+                }
+                img{
+                    width:2.2rem;
+                    background-size:cover;
+                }
+            }
+
+            .group{
+            margin:2rem 0 1rem 0;
+                input[type=file]{
+                    display:none;
+                }
+
+                display: flex;
+                align-items: center;
+                
+            .uploadText{
+                background-color: $altBodyColor;
+                border:.3px solid $borderGrey;
+                width:34rem;
+                padding:1.3rem;
+                font-size:1.4rem;
+                color:$grey;
+            }
+            .uploadImg{
+                transform: translateX(-7rem);
+                border-left:.3px solid $borderGrey;
+                padding-left:1.5rem;
+                img{
+                    height: 100%;
+                    width:3.5rem;
+                    background-size:cover;
+                }
+            }
+        }
+
+        .text{
+            display: flex;
+            font-size:1.4rem;
+            width:34rem;
+            justify-content: center;
+            
+        }
+        }
+    }
+}

@@ -1,0 +1,172 @@
+@import "../../../sass/main.scss";
+
+.register{
+position:relative;
+    .registerContainer{
+
+        background-image:url(../../../../public/images/registerPage-01.png);
+        width:100%;
+        height: 100vh;
+        background-size:cover;
+        background-position: bottom right;
+        
+        @include respond(tab-port){
+            display: flex;
+            justify-content: center;
+        }
+        .registerForm{
+
+
+            .logoContainer{
+                display: flex;
+                justify-content: center;
+                padding:4rem 0;
+
+                .logo{
+                    width:10rem;
+                    height: 10rem;
+                    border-radius: 50%;
+                    border:.3px solid $borderGrey;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img{
+                        width:6rem;
+                        background-size: cover;
+                    }
+                }
+            }
+            position:absolute;
+            top:45%;
+            left:60%;
+    
+            transform: translateY(-50%);
+            margin-right: 5rem;
+
+            @include respond(tab-port){
+                left:50%;
+                transform:translate(-50%, -50%);
+
+            }
+       
+            
+
+
+            label{
+                font-size:1.4rem;
+                display: flex;
+                align-items: center;
+                gap:1rem;
+                font-weight: bold;
+                color:white;
+                padding:1.5rem 0;
+            }
+            input{
+                width:24rem;
+                font-size: 1.4rem;
+                color:$lightGrey;
+                padding:1rem;
+                background-color: $altBodyColor;
+                border:.3px solid $borderGrey;
+
+                &:active,&:focus{
+                    outline:none;
+                }
+
+                &:defined{
+                    background-color: $altBodyColor;
+                    color:white;
+                }
+
+                &::placeholder{
+                    color:grey;
+                }
+            }
+
+            .nameGroup{
+                display: flex;
+                gap:1rem;
+                .formgroup{
+
+                }
+            }
+
+            .formgroupEmail{
+                width:49rem;
+
+                input{
+                    width:100%;
+                }
+            }
+
+            .formgroupNationalId{
+                width:49rem;
+                input{
+                    width:100%;
+                }
+            }
+
+            .phoneNumberGroup{
+
+                display: flex;
+                gap:1rem;
+            }
+
+            .passwordGroup{
+                display: flex;
+                gap:1rem;
+            }
+
+            .formgroupbtn{
+
+                .btnContainer{
+                    display: flex;
+                    justify-content: flex-end;
+                    padding:2rem 0;
+                    .btn{
+                        button{
+                            width:20rem;
+                            height: 5rem;
+                            border:none;
+                            background-color:$primaryColor;
+                            color:White;
+                            font-size:1.4rem;
+                            font-weight: bold;
+                            display: flex;
+                            align-items: center;
+                            gap:1rem;
+                            justify-content: center;
+                            transition:all .3s ease-in-out;
+                            &:hover{
+                                background-color:$grey;
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            .text{
+                font-size:1.3rem;
+                text-align: center;
+
+                .link{
+                    text-decoration: none;
+                    color:$primaryColor;
+                }
+            }
+        }
+    }
+}
+
+
+.passwordError{
+
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    font-size:1.4rem;
+    margin-top: 1rem;
+    color:rgb(197, 28, 28);
+}

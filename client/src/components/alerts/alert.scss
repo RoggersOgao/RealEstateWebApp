@@ -1,0 +1,60 @@
+.alertContainer{
+animation: moveInRight 1s ease-in-out;
+    .alertError{
+        position:absolute;
+        right:0;
+        top:5rem;
+        border-radius: 3rem 0 0 3rem;
+        // width:20rem;
+        min-height: 4rem;
+        z-index:5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(248, 0, 0);
+    .textError{
+        color:white;
+        font-weight:bold;
+        font-size:1.4rem;
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    }
+
+
+    .alertSuccess{
+        position:absolute;
+        right:0;
+        top:5rem;
+        border-radius: 3rem 0 0 3rem;
+        width:20rem;
+        height: 4rem;
+        z-index:5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(13, 156, 44);
+    .textSuccess{
+        color:white;
+        font-weight:bold;
+        font-size:1.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    }
+}
+
+@keyframes moveInRight {
+    
+    0%{
+        opacity:0;
+        transform: translateX(27rem);
+    }
+    100%{
+        opacity:1;
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,109 @@
+@import "../../../sass/main.scss";
+.login{
+    .loginContainer{
+        background-image:url(../../../../public/images/LoginPage-01.png);
+        width:100%;
+        height: 100vh;
+        background-size:cover;
+        background-position: bottom;
+        position:relative;
+        .loginForm{
+            width:34rem;
+            position:absolute;
+            top:10%;
+            left:50%;
+            transform: translateX(-50%);
+
+            .logoContainer{
+                display: flex;
+                justify-content: center;
+                .logo{
+                   display: flex;
+                   width:10rem;
+                   height: 10rem;
+                   border: .3px solid $borderGrey;
+                   align-items: center;
+                   justify-content: center;
+                   border-radius: 50%;
+                    img{
+                        width:6rem;
+                        background-size: cover;
+                    }
+                }
+            }
+
+            .formgroup{
+            .textgroup{
+                font-size:1.3rem;
+
+                .link{
+                    color:$primaryColor;
+                    text-decoration: none;
+                }
+            }
+
+            .btnCont{
+                width:100%;
+                display: flex;
+                justify-content: flex-end;
+                padding:2rem 0;
+                .btngroup{
+                    button{
+                        width:13rem;
+                        height: 4rem;
+                        border:none;
+                        background-color: $primaryColor;
+                        color:white;
+                        font-weight: bold;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 1.4rem;
+                        gap:1rem;
+                        transition: all .3s ease-in-out;
+
+                        &:hover{
+                            background-color: $grey;
+                        }
+
+                        &:disabled{
+                            background-color:grey;
+                            color:rgb(228, 228, 228);
+                        }
+                    }
+                }
+            }
+
+                
+                label{
+                    padding:1rem 0;
+                    display: flex;
+                    gap:1rem;
+                    align-items: center;
+                    font-size:1.4rem;
+                    color:white;
+
+                    .icons{
+                        font-size:2rem;
+                    }
+
+                }
+                input{
+                    padding:1rem;
+                    width:100%;
+                    background-color: $altBodyColor;
+                    border:.3px solid $borderGrey;
+                    color:white;
+                    font-weight: medium;
+                    font-size:1.4rem;
+
+                    &:active,&:focus{
+                        outline:none;
+                        background-color: $altBodyColor;
+                    }
+                   
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,240 @@
+@import "../../sass/main.scss";
+
+    
+    // bottom area
+    .activeColor{
+        background-color: $bodyColor;
+    }
+    .bottom{
+        position: relative;
+        display: flex;
+        position:sticky;
+        top:4.7rem;
+        z-index: 4;
+        justify-content: space-between;
+        align-items: center;
+        height: 9.9rem;
+        padding: 0 5.4rem;
+
+        @include respond(phone){
+            padding: 0 2.5rem;
+        }
+        border-bottom: .3px solid $borderGrey;
+
+        // styling the logo
+        &__logo{ 
+            img{
+                width:7rem;
+                height: 5.6rem;       
+            }
+        }
+
+        // styling the nav links
+        &__nav{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: flex-end;
+            animation: moveInRight 1s ease-in-out;
+            .menubar{
+                display: flex;
+                flex-direction: column;
+                cursor:pointer;
+                opacity:0;
+                visibility: hidden;
+                display:none;
+                gap:.6rem;
+                span:nth-child(1){
+                    border:1px solid $lightGrey;
+                    width:1.5rem;
+                }
+                span:nth-child(2){
+                    border:1px solid $lightGrey;
+                    width:2rem;
+                }
+                span:nth-child(3){
+                    border:1px solid $lightGrey;
+                    width:2.5rem;
+                }
+
+
+                @include respond(tab-port){
+                    opacity: 1;
+                    visibility: visible;
+                    display:flex;
+                    align-items: flex-start
+                }
+            }
+            ul{
+                display: flex;
+                align-items: center;  
+                position: relative; 
+                .ISnavLink{
+                    list-style: none;
+                    cursor: pointer;
+                    padding:1.3rem 2rem;
+                    transition: all .3s ease-in-out;
+                    .navLink{
+                        text-decoration: none;
+                        color:$lightGrey;
+                        font-weight: bold;
+                        font-size:1.6rem;
+                    }
+                    &:hover{
+                        border-radius: 1rem;
+                        background-color: rgba(255, 255, 255, 0.096);
+                    }
+
+                    @include respond(tab-port){
+                        display:none;
+                        opacity: 0;
+                        visibility: hidden;
+                        }
+                }
+                .heartIcon{
+                    position: relative;
+                    padding:1.3rem 2rem;
+                    img{
+                        width:2rem;
+                    background-size: cover;
+                    }
+
+                    span{
+                        color:$altBodyColor;
+                        width:2rem;
+                        height: 2rem;
+                        border-radius: 50%;
+                        background-color: $primaryColor;
+                        position: absolute;
+                        top:.5rem;
+                        left:.5rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: bold;
+                    }
+                }
+                .cartSectionDiv{
+                    margin-right: 1rem;
+                    position: relative;
+                    padding:0;
+
+                    @include respond(tab-port){
+                        display:block;
+                        opacity:1;
+                        visibility:visible;
+                    }
+                }
+                .lastChild{
+                    border:.3px solid $borderGrey;
+                        border-radius: 1rem;
+                        padding:1.3rem 4rem;
+                        &:hover{
+                            // background-color: transparent;
+                            border:.3px solid transparent;
+                        }
+                }
+
+               
+                .cardContainerBar{
+                    height: 70vh;
+                    position: absolute;
+                    top:9rem;
+                    border: .3px solid $borderGrey;
+                    width:40rem;
+                    right: 1.4rem;
+                    background-color: $altBodyColor;
+                    border-radius: 1rem;
+                    box-shadow: 1px 8px 25px -4px rgb(12, 7, 0);
+                    
+                    z-index:1;
+                    &::after{
+                        content: "";
+                        width:2rem;
+                        height: 2rem;
+                        position: absolute;
+                        top: -9px;
+                        right: 3px;
+                        background-color:$altBodyColor;
+                        transform: rotate(45deg);
+                        border:.3px solid $borderGrey;
+                        z-index:2;
+                    }
+                    @include respond(tab-port){
+                        right:1.5rem;
+                        width:40rem;
+                    }
+                    @include respond(phone){
+                        right:1.5rem;
+                        width:40rem;
+                    }
+                    .data{
+                        height: 100%;
+                        overflow: scroll;
+                        scroll-snap-align: center;
+                        scrollbar-width: .3px;
+                        z-index:100;
+                }
+            }
+            }
+
+
+
+
+            // styling the active menu bar
+
+
+            .activeContainer{
+                position:fixed;
+                background-color:$altBodyColor;
+                min-height: 100vh;
+                right:0;
+                top:0;
+                width:30rem;
+                padding:2rem;
+                animation: moveInRight .4s ease-in-out;
+                
+                .menubarActive{
+                    font-size:3rem;
+                    display: flex;
+                    justify-content: flex-end;
+                    padding:2rem 0;
+                    color:white;
+                    cursor: pointer;
+                }
+                .ISnavLinkActive{
+                    list-style-type: none;
+                    padding:2rem;
+                    width: 100%;
+                    .navLink{
+                        font-size:1.6rem;
+                        text-decoration:none;
+                        color:$lightGrey;
+                        display: flex;
+                        gap:1rem;
+                        align-items: center;
+                    }
+                    animation: moveInRight .7s ease-in-out;
+                    &:hover{
+                        background-color: rgba(128, 128, 128, 0.205);
+                        border-radius: 1rem;
+
+
+                    }
+                }
+            }
+        }
+
+    }
+
+    @keyframes moveInRight {
+        0%{
+            opacity:0;
+            transform: translateX(20rem);
+        }
+        100%{
+            opacity:1;
+            transform: translate(0);
+        }
+        
+    }

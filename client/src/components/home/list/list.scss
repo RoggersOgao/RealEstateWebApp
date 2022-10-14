@@ -1,0 +1,194 @@
+@import "../../../sass/main.scss";
+
+.list{
+width:75%;
+position: relative;
+margin:0 auto;
+display: flex;
+gap:3rem;
+@include respond(tab-port){
+    flex-direction: column;
+    width: 80%;
+}
+@include respond(phone){
+    width:95%;
+}
+    &__left{
+        flex:1;
+        .form{
+            // min-height: 100vh;
+            .formgroup{
+                margin-top: 2.5rem;
+                display: flex;
+                flex-direction: column;
+
+                .price{
+                    padding-bottom:2.5rem;
+
+                }
+                .rangeData{
+                    padding-top:3rem;
+                    color:$primaryColor;
+                    text-indent: 5rem;
+                }
+                .slider{
+
+
+                    margin-top: 2rem;
+                    position: relative;
+                    -webkit-appearance:none;
+                    height:1rem;
+                    border-radius:50px;
+                    outline:none;
+                    padding:0;
+                    margin:0;
+                    
+                    
+
+                    &::-webkit-slider-thumb{
+                        width:3rem;
+                        height: 3rem;
+                        border-radius: 50%;
+                        background: $primaryColor;
+                        cursor: pointer;
+                        transition: background 0.15s ease-in-out;
+                    
+                        &:hover {
+                          background: white;
+                        }
+                    }
+
+                    &::-moz-range-thumb {
+                        position:absolute;
+                        width:3rem;
+                        height: 3rem;
+                        border: 0;
+                        border-radius: 50%;
+                        background: $primaryColor;
+                        cursor: pointer;
+                        transition: background 0.15s ease-in-out;
+                    
+                        &:hover {
+                          background: rgb(255, 224, 184);
+                        }
+                      }
+
+                      &::-moz-range-track {
+                        background-color: $altBodyColor;
+                      }
+                      
+
+
+
+
+                }
+                label{
+                    font-size:1.5rem;
+                    color:$lightGrey;
+                    // font-weight: bold;
+                }
+                input{
+                    width:39rem;
+                    padding:1.359rem;
+                    font-size:1.5rem;
+                    background-color: transparent;
+                    border:.3px solid $borderGrey;
+                    color:$lightGrey;
+
+                    &:active,&:focus{
+                        outline:none;
+                    }
+                }
+
+                .group{
+                    display: flex;
+                    align-items: center;
+                    gap:13rem;
+                    position:relative;
+                    margin-top: 2rem;
+                    .minus{
+                        // position:absolute;
+                        cursor: pointer;
+                        height: 3rem;
+                        width: 3rem;
+                        border-radius: 50%;
+                        border:.3px solid $grey;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color:$lightGrey;
+                        font-size:2rem;
+                        top:1rem;
+                        background-color: $bodyColor;
+                    }
+                    .number{
+                        position:absolute;
+                        font-size:3.5rem;
+                        top: -.4rem;
+                        left: 8.5rem;
+                        color:$primaryColor;
+                    }
+                    .plus{
+                        // position:absolute;
+                        cursor: pointer;
+                        top:1rem;
+                        left:17rem;
+                        height: 3rem;
+                        width: 3rem;
+                        border-radius: 50%;
+                        border:.3px solid $grey;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color:$lightGrey;
+                        font-size:2rem;
+                        background-color: $bodyColor;
+
+                    }
+
+                    button:disabled{
+                        color:rgba(128, 128, 128, 0.144);
+                        cursor:not-allowed;
+                    }
+                }
+
+                .groupCheck{
+                    display: flex;
+                    align-items: center;
+                    gap:1.5rem;
+                    margin-top: 2rem;
+                    
+                    input[type=checkbox]:checked ~ .poolBox{
+                        background: $primaryColor;
+                    }
+                    .poolBox{
+                        width: 2.4rem;
+                        height: 2.4rem;
+                        border:.3px solid $grey;
+
+                    }
+                    .poolText{
+                        color:$grey;
+                    }
+                    input[type=checkbox]{
+                        display:none;
+                    }
+                    
+                }
+
+
+                .featuresGroup{
+                    display: grid;
+                    grid-template-columns:17rem 17rem;
+                    grid-template-rows: 4rem;
+                    column-gap:2rem;
+                }
+
+            }
+        }
+    }
+
+    &__right{
+        flex:3;
+    }
+}

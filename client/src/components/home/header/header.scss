@@ -1,0 +1,176 @@
+@import "../../../sass/main.scss";
+
+.headerContainer{
+   display: flex;
+   .container{
+    display: flex;
+flex-direction: column;
+@include respond(tab-port){
+    align-items: center;
+}
+@include respond(phone){
+    align-items:flex-start;
+    padding-left:2rem;
+}
+   }
+   &__img{
+    //    flex:1;
+       background-image: url(../../../../public/images/building.png);
+       height:90vh;
+       width:45rem;
+        mask-image: linear-gradient(#000, #fff0 95%);
+        background-size:cover;
+        transform: translateY(-9.9rem);
+        z-index:1;
+        position:absolute;
+    }
+
+    .left{
+        flex:1;
+        @include respond(tab-port){
+            display:none;
+        }
+    }
+    
+    &__text{
+        @include respond(phone){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        flex:2;
+        color:white;
+        z-index:2;
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        height: 80vh;
+
+        .container{
+            width:98%;
+            .title{
+                font-size:9.6rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing:.5rem;
+                padding-bottom: 2.5rem;
+
+                @include respond(phone){
+                    font-size:7rem;
+                }
+
+                span{
+                    color:$primaryColor;
+                }
+            }
+            .description{
+                position:relative;
+                width:50rem;
+
+                @include respond(phone){
+                    width:50rem;
+                }
+                p{
+                font-size:1.4rem;
+                color:$lightGrey;
+                padding:.8rem 2.5rem;
+
+                &::after{
+                    content:"";
+                    border-top:.3px solid $borderGrey;
+                    border-right:.3px solid $borderGrey;
+                    border-bottom:.3px solid $borderGrey;
+                    position:absolute;
+                    top:-1px;
+                    padding:.5rem;
+                    right:0;
+                    height: 3.9em;
+                    
+                    
+                }
+                &::before{
+                    content:"";
+                    border-top:.3px solid $borderGrey;
+                    border-left:.3px solid $borderGrey;
+                    border-bottom:.3px solid $borderGrey;
+                    position:absolute;
+                    top:-1px;
+                    padding:.5rem;
+                    left:0;
+                    z-index:1;
+                    height: 3.9em;
+                    
+                }
+               }
+            }
+
+            .icons{
+                display: flex;
+                margin-top: 6.2rem;
+                width:80%;
+                justify-content: space-between;
+                text-align: center;
+
+                @include respond(tab-land){
+                    width:90%;
+                }
+                @include respond(tab-port){
+                    width:70%;
+                }
+                @include respond(phone){
+                    width:90%;
+                    margin-top:15rem;
+                }
+                .group{
+                    &__icon{
+                        display: flex;
+                        
+                        .imgIcons--first{
+
+                            height:9.9rem;
+                            background-size:cover;
+                            @include respond(tab-port){
+                                height:6.9rem;
+                            }
+                            @include respond(phone){
+                                height: 6rem;
+                            }
+                        }
+                        .imgIcons{
+                            height:9.9rem;
+                            padding-left:5.5rem;
+                            border-left:.3px solid $borderGrey;
+                            background-size:cover;
+
+                            @include respond(tab-port){
+                                height:6.9rem;
+                            }
+                            @include respond(phone){
+                                height: 6rem;
+                                padding-left:3rem;
+                            }
+                        }
+                        
+                    }
+                    &__text{
+                        padding:2rem 0 ;
+                        font-size:1.4rem;
+                        color:$grey;
+                        transform: translateX(3rem);
+
+                        @include respond(phone){
+                            transform: translateX(1.5rem)
+                        }
+                    }
+                    &__text--first{
+                        padding:2rem 0 ;
+                        font-size:1.4rem;
+                        color:$grey;
+                    }
+                }
+                
+            }
+        }
+
+    }
+}

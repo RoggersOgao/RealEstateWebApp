@@ -1,0 +1,181 @@
+@import "../../sass/main.scss";
+
+.nav{
+    z-index:2;
+
+    .activeTop{
+        background-color: $bodyColor;
+    }
+    .top{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5.4rem;
+        align-items: center;
+        height: 4.7rem;
+        border-bottom: .3px solid $borderGrey;
+        gap:1.5rem;
+
+        @include respond(phone)
+        {
+            padding: 0 2.5rem;
+        }
+        &__left{
+            display: flex;
+            gap:3.1rem;
+            color:white;
+            &--ISTextIcon{
+                display: flex;
+                gap:1rem;
+                &--icon{
+                    img{
+                        height: 1.6rem;
+                        background-size: cover;
+                    }
+                }
+                &--text{
+                   font-size:1.4rem; 
+                }
+            }
+        }
+        &__right{
+            display: flex;
+            gap:3.1rem;
+            color:white;
+            &--ISTextIcon{
+                display: flex;
+                align-items: center;
+                gap:1.2rem;
+                &--icon{
+                    img{
+                        height: 1.6rem;
+                        background-size: cover;
+                    }
+                    .iconSignIn{
+                        height: 1.6rem;
+                        background-size: cover;
+                        cursor:pointer;
+                    }
+                }
+                &--text{
+                   font-size:1.4rem; 
+                }
+
+                
+                &--textSignIn{
+                    font-size:1.4rem;
+                    cursor:pointer;
+                    @include respond(phone){
+                        opacity:0;
+                        visibility: hidden;
+                        display:none;
+                    }
+                    .link{
+                        text-decoration: none;
+                        color:white;
+
+                       
+                    }
+                }
+            }
+            .profileContainer{
+                width:4rem;
+                height:4rem;
+                border-radius:50%;
+                border:.3px solid $borderGrey;
+                overflow:hidden;
+                cursor:pointer;
+                .profile{
+                    width:4rem;
+                    object-fit:cover;
+                    height:4rem;
+                }
+
+            }
+            .profileContainerItems{
+                position:absolute;
+                z-index:6;
+                top:5rem;
+                right:5rem;
+                width:14rem;
+                border-radius:6px;
+                background-color:$altBodyColor;
+                box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.281);
+                border:.3px solid $borderGrey;
+
+                .itemsContainer{
+                    display:flex;
+                    flex-direction:column;
+                    
+                    .logo{
+                        display: flex;
+                        justify-content: center;
+                        padding:.7rem 0;
+                        img{
+                            filter:opacity(.8);
+                            width:6rem;
+                            background-size:cover;
+                        }
+                    }
+                    .listUser{
+                        margin-top: 1rem;
+                        font-size:1.3rem;
+                        padding:1rem 0;
+                        width:100%;
+                        display:flex;
+                        justify-content: center;
+                        border-bottom:.3px solid $borderGrey;
+                        border-top:.3px solid $borderGrey;
+                        
+                        
+                        
+
+                        .cont{
+                            display:flex;
+                            gap:1rem;
+                            align-items:center;
+                            color:$lightGrey;
+                        }
+                    }
+                    .list{
+                        
+                        font-size:1.4rem;
+                        padding:1rem;
+                        width:100%;
+                        cursor:pointer;
+                        &:hover{
+                            background-color:rgb(61, 61, 61);
+                        }
+                        &__signout{
+                            display:flex;
+                            gap:1rem;
+                            .signoutIcon{
+                                transform: rotate(180deg);
+                                width:2rem;
+                                background-size:cover;
+    
+                            }
+
+                        }
+                        .link{
+                        font-size:1.4rem;
+                        text-decoration:none;
+                        color:white;
+                        display: flex;
+                        gap:1rem;
+                        align-items: center;
+                        
+                        }
+
+                    }
+                }
+            }
+        }
+        
+        
+    }
+
+
+
+}
+
+
