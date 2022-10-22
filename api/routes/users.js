@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const User = require("../models/User");
-const Post = require("../models/Post");
+const Listing = require("../models/Listing");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken")
 
@@ -55,7 +55,7 @@ router.delete("/:id", verify, async (req, res) => {
     try {
       const user = await User.findById(req.params.id);
       try {
-        await Post.deleteMany({ username: user.username });
+        await Listing.deleteMany({ username: user.username });
         await User.findByIdAndDelete(req.params.id);
         res.status(200).json("User has been deleted...");
       } catch (err) {

@@ -7,6 +7,7 @@ export const LoginProvider = ({children}) => {
     const initialState = {
         user:JSON.parse(localStorage.getItem("user")) || null,
         isLoading:false,
+        
     }
 
     const [state, dispatch] = useReducer(LoginReducer, initialState)

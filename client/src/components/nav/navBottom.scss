@@ -139,27 +139,16 @@
                 .cardContainerBar{
                     height: 70vh;
                     position: absolute;
-                    top:9rem;
-                    border: .3px solid $borderGrey;
-                    width:40rem;
-                    right: 1.4rem;
+                    top: 7.3rem;
+                    border: 0.3px solid #7070702f;
+                    width: 40rem;
+                    right: -0.6rem;
                     background-color: $altBodyColor;
                     border-radius: 1rem;
                     box-shadow: 1px 8px 25px -4px rgb(12, 7, 0);
                     
                     z-index:1;
-                    &::after{
-                        content: "";
-                        width:2rem;
-                        height: 2rem;
-                        position: absolute;
-                        top: -9px;
-                        right: 3px;
-                        background-color:$altBodyColor;
-                        transform: rotate(45deg);
-                        border:.3px solid $borderGrey;
-                        z-index:2;
-                    }
+                   
                     @include respond(tab-port){
                         right:1.5rem;
                         width:40rem;

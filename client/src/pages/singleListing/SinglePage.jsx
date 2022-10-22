@@ -3,6 +3,7 @@ import "./singlePage.scss"
 import {useParams} from 'react-router-dom'
 import { fetchSingleListing } from '../../components/context/listing/ListingActions'
 import ListingContext from '../../components/context/listing/ListingContext'
+import Property from '../../components/singlePage/Property'
 function SinglePage() {
 
   const {state,dispatch} = useContext(ListingContext)
@@ -22,10 +23,10 @@ function SinglePage() {
     fetchSingleProperty()
   },[dispatch, params.propertyId])
 
-  const property=state.SinglePage
+  console.log(state.singleProperty)
   return (
     <div className="property">
-      {property}
+      <Property property={state.singleProperty} />
     </div>
   )
 }

@@ -40,6 +40,8 @@
                 padding:.5rem;
             }
             .link1{
+                width:3rem;
+                height: 3rem;
                 background-color: #151412a1;
                 cursor: pointer;
                 border-radius: 4px;
@@ -49,15 +51,14 @@
                 }
             }
             .link2{
+                width:3rem;
+                height: 3rem;
                 background-color: #151412a1;
                 cursor: pointer;
                 border-radius: 4px;
                 transition: all .3s ease-in-out;
                 &:hover{
                     background-color: rgba(155, 1, 1, 0.753);
-                }
-                &:focus,&:active{
-                    animation:blink .3s ease-in-out;
                 }
                 
             }
@@ -304,16 +305,7 @@ transform: translate(-50%, -50%);
     }
 }
 
-@keyframes blink {
-    0%{
-        opacity:0;
-        transform: scale(0);
-    }
-    100%{
-        opacity:.5;
-        transform: scale(1.4);
-    }
-}
+
 
 @keyframes blinkModal {
     

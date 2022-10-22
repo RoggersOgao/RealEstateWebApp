@@ -5,6 +5,7 @@ const dotenv = require("dotenv");
 const jwt = require("jsonwebtoken")
 const validator = require('validator')
 
+
 //REGISTER
 router.post("/register", async (req, res) => {
   try {
@@ -27,6 +28,9 @@ router.post("/register", async (req, res) => {
     }
     if(!validator.isEmail(req.body.email)){
       throw Error("Please Enter a Valid Email!!")
+    }
+    if(!validator.isMobilePhone(req.body.phoneNumber,["en-KE"])){
+      throw Error("Invalid Number!!")
     }
     if(!validator.isAlpha(req.body.username,["en-US"], { ignore: " " })){
       throw Error("Name should be letters only!!")

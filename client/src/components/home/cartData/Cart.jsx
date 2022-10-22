@@ -3,10 +3,12 @@ import "./cart.scss"
 import { FaTimes } from 'react-icons/fa';
 import {Link} from 'react-router-dom'
 function Cart({cart}) {
+
+    const IL = "http://localhost:5003/images/"
   return (
     <div className="cart">
         <div className="cart__left">
-            <img src={process.env.PUBLIC_URL + `${cart.img}`} alt="" className='cart__left--img'/>
+            <img src={IL + `${cart.img[0]}`} alt="" className='cart__left--img'/>
             <div className="card__left--group">
                 <div className="link1" >
                     <FaTimes className="closeIcon"/>

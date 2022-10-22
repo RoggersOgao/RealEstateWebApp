@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const ls = axios.create({
-    baseURL:"http://localhost:5001/",
+    baseURL:"http://localhost:5003/",
     headers:{
         "content-type":"application/json"
     }
@@ -9,12 +9,13 @@ const ls = axios.create({
 
 
 export const fetchListing = async() => {
-    const response = await ls.get("/listing")
+    const response = await ls.get("/api/listings")
 
     return response
 }
 
 export const fetchSingleListing = async(id)=> {
-    const response = await ls.get(`/listing/${id}`)
+    const response = await ls.get(`/api/listings/${id}`)
     return response
 }
+

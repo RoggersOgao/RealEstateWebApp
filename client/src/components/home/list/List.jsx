@@ -16,7 +16,7 @@ function List() {
     // calling the Listing context
     const {state, dispatch} = useContext(ListingContext)
     // 
-    const[currentPage, setCurrentPage] = useState( 1 || JSON.parse(localStorage.getItem("page")) );
+    const[currentPage, setCurrentPage] = useState( JSON.parse(localStorage.getItem("page")) || 1 );
     let itemsPerPage = 5
     const [pageLimits, setPageLimits] = useState(5);
     const [minPageLimit, setMinPageLimit] = useState(1);
@@ -97,24 +97,24 @@ if(form.searchParams){
 }
 
 // filter Property type
-if(form.propertyType === "For Rent"){
-    data = data.filter((item)=> item.propertyType === "For Rent")
-}else if(form.propertyType === "For Sale"){
-    data = data.filter((item)=> item.propertyType === "For Sale")
+if(form.propertyState === "For Rent"){
+    data = data.filter((item)=> item.propertyState === "For Rent")
+}else if(form.propertyState === "For Sale"){
+    data = data.filter((item)=> item.propertyState === "For Sale")
 }else{
-    data = data.filter((item)=> item.propertyType === "For Sale" || "For Rent")
+    data = data.filter((item)=> item.propertyState === "For Sale" || "For Rent")
 }
 // type of the property
-if(form.property === "Office"){
-    data = data.filter((item)=> item.property === "Office")
-}else if (form.property === "Home"){
-    data = data.filter((item) => item.property === "Home")
-}else if (form.property === "Condominium"){
-    data = data.filter((item) => item.property === "Condominium")
-}else if (form.property === "Apartment"){
-    data = data.filter((item) => item.property === "Apartment")
+if(form.propertyType === "Office"){
+    data = data.filter((item)=> item.propertyType === "office")
+}else if (form.propertyType === "home"){
+    data = data.filter((item) => item.propertyType === "home")
+}else if (form.propertyType === "condominium"){
+    data = data.filter((item) => item.propertyType === "condominium")
+}else if (form.propertyType === "apartment"){
+    data = data.filter((item) => item.propertyType === "apartment")
 }else{
-    data = data.filter((item) => item.property === "Home" || "Apartment" || "Condominium" || "Office")
+    data = data.filter((item) => item.propertyType === "home" || "apartment" || "condominium" || "office")
 }
 
 
@@ -205,7 +205,7 @@ const handleRange = (e) =>{
                     <label htmlFor="">For Rent/Sale</label>
                     <Dropdown type={"allProperties"}
                     value = {form.propertyType || ''}
-                    select={(value)=>setField("propertyType", value)}/>
+                    select={(value)=>setField("propertyState", value)}/>
                 </div>
                 {/* `
                 property Type 
@@ -214,7 +214,7 @@ const handleRange = (e) =>{
                     <label htmlFor="">Type of Property</label>
                     <Dropdown type={"typeOfProperty"}
                     value = {form.property || ''}
-                    select={(value)=>setField("property", value)}/>
+                    select={(value)=>setField("propertyType", value)}/>
                 </div>
                 {/* 
                 Location dropdown
