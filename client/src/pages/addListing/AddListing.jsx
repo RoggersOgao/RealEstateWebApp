@@ -79,7 +79,7 @@ function AddListing() {
           );
           response.data.map(
             (item, index) => (
-              uploads.push(item.filename), console.log(item.filename)
+              uploads.push(item.filename)
             )
           );
           
@@ -100,7 +100,7 @@ function AddListing() {
         try {
           const listingResponse = await lsR.post("/api/listings", newForm);
           console.log(listingResponse);
-          if(listingResponse.status == 200){
+          if(listingResponse.status === 200){
             setAlert("Uploaded Successfully",'success')
           }
 

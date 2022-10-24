@@ -28,7 +28,7 @@ function Cart({cart}) {
             </div>
             <div className="middle">
                 <div className="middle__title">
-                <Link to="/" className='link'>
+                <Link to={`/listing/${cart._id}`}  className='link'>
                     {cart.propertyName}
                 </Link>
                 </div>

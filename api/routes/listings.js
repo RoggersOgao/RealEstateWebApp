@@ -129,9 +129,9 @@ router.get("/", async (req, res) => {
   try {
     let listings;
     if (username) {
-      listings = await Listing.findAll({ userId: username });
+      listings = await Listing.find({ userId: username });
     } else if (propertyState) {
-      listings = await Listing.findAll({ propertyState: propertyState });
+      listings = await Listing.find({ propertyState: propertyState });
     } else {
       listings = await Listing.find();
     }

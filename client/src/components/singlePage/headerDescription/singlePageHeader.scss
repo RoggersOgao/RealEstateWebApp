@@ -1,0 +1,269 @@
+@import "../../../sass/main.scss";
+
+.sPageHeader {
+  margin-top: 2.55rem;
+  &__title {
+    border-left: 5px solid white;
+    padding: 2rem;
+    .name {
+      font-size: 3rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: white;
+    }
+    .username {
+      font-size: 1.3rem;
+      padding-top: 0.4rem;
+    }
+  }
+
+  &__description {
+    margin: 3rem;
+    .description {
+      font-size: 1.5rem;
+      color: rgb(117, 117, 117);
+      line-height: 2.3rem;
+    }
+    .otherfeatures {
+      margin-top: 5rem;
+      padding-left: 7rem;
+      .location {
+position: relative;
+margin-bottom: 6rem;
+
+.text{
+position: absolute;
+padding-top: 1.6rem;
+padding-left:5rem;
+font-size:1.2rem;
+color:$primaryColor;
+&::before{
+    content: "";
+    width:8rem;
+    position: absolute;
+    height:0;
+    left:-4rem;
+    top:2.4rem;
+    border: .3px solid rgb(40, 40, 40);
+}
+}
+
+
+        &::before{
+            content: "";
+            width:1.6rem;
+            height: 1.6rem;
+            background-color: rgb(0, 76, 183);
+            border-radius: 50%;
+            position: absolute;
+            top:33%;
+            transform: translateY(-50%);
+            left:-5rem;
+        }
+
+        &::after{
+            content: "";
+height: 8rem;
+border: .3px solid rgb(40, 40, 40);
+position: absolute;
+left: -36px;
+top: 14px;
+z-index: -1;
+        }
+        .location__title {
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+        }
+
+        font-size: 1.5rem;
+        color: white;
+        font-weight: bold;
+        img {
+          width: 2rem;
+        }
+      }
+      .bedrooms {
+        position: relative;
+margin-bottom: 6rem;
+        font-size: 1.4rem;
+        color: white;
+
+
+        .text{
+            position: absolute;
+            padding-top: 1.6rem;
+            padding-left:5rem;
+            font-size:1.6rem;
+            color:$primaryColor;
+            &::before{
+                content: "";
+                width:8rem;
+                position: absolute;
+                height:0;
+                left:-4rem;
+                top:2.4rem;
+                border: .3px solid rgb(40, 40, 40);
+            }
+            }
+        &::before{
+            content: "";
+            width:1.6rem;
+            height: 1.6rem;
+            background-color: rgb(4, 95, 198);
+            border-radius: 50%;
+            position: absolute;
+            top:46%;
+            transform: translateY(-50%);
+            left:-5rem;
+        }
+
+        &::after{
+            content: "";
+height: 8rem;
+border: .3px solid rgb(40, 40, 40);
+position: absolute;
+left: -36px;
+top: 14px;
+z-index: -1;
+        }
+        &__title {
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+        }
+        img {
+          width: 2rem;
+        }
+      }
+      .bathrooms {
+        position: relative;
+        font-size: 1.4rem;
+        color: white;
+        font-weight: bold;
+
+        .text{
+            position: absolute;
+            padding-top: 1.6rem;
+            padding-left:5rem;
+            font-size:1.6rem;
+            color:$primaryColor;
+            &::before{
+                content: "";
+                width:8rem;
+                position: absolute;
+                height:0;
+                left:-4rem;
+                top:2.4rem;
+                border: .3px solid rgb(40, 40, 40);
+            }
+            }
+
+        &::before{
+            content: "";
+            width:1.6rem;
+            height: 1.6rem;
+            background-color: rgb(1, 153, 213);
+            border-radius: 50%;
+            position: absolute;
+            top:33%;
+            transform: translateY(-50%);
+            left:-5rem;
+        }
+        &::after{
+            content: "";
+height: 2.7rem;
+border: .3px solid rgb(40, 40, 40);
+position: absolute;
+left: -36px;
+top: 14px;
+z-index: -1;
+        }
+        &__title {
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+        }
+
+        img {
+          width: 2rem;
+        }
+      }
+    }
+  }
+
+
+
+
+//   more options styling
+
+&__moreOptions{
+    padding-top: 6rem;
+    display: flex;
+    justify-content: space-between;
+    gap:.6rem;
+    
+    .left{
+      display: flex;
+      gap:.6rem;
+      &--button{
+  
+        padding:1rem 2rem;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        gap:1rem;
+        color:white;
+        font-weight: bold;
+  
+    }
+
+    
+    .state{
+        background-color: rgb(77, 194, 71);
+
+    }
+    .type{
+        background-color: grey;
+    }
+    .rating{
+        background-color: rgb(255, 101, 80);
+    }
+    .created{
+        background-color: rgb(0, 136, 204);
+    }
+    .price{
+        font-size: 1.4rem;
+        background-color: rgb(203, 32, 39);
+    }
+    }
+
+    .right{
+      &--button{
+        .link{
+          padding:1rem 2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap:1rem;
+          color:white;
+          font-size: 1.2rem;
+          font-weight: bold;
+          text-decoration: none;
+          transition: all .3s ease-in-out;
+
+          &:hover{
+            background-color: $grey;
+          }
+
+        }
+  
+    }
+    .contact{
+      background-color: $primaryColor;
+    }
+
+    }
+}
+}

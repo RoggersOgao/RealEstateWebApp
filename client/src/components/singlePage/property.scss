@@ -1,247 +1,404 @@
 @import "../../sass/main.scss";
 
-.property{
-    margin-top: 0;
+.property {
+  &__nav {
+    z-index: 4;
+    position: sticky !important;
+    top: 0;
+  }
+  margin-top: 0;
 
 
-    .propertyIcons{
-        position: absolute;
-        z-index: 2;
-        color:white;
-        width:100%;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        gap:1.5rem;
-        padding:2rem 4rem 0 0;
-        &__back{
-            &--link{
-            display: flex;
-            font-size:1.4rem;
-            color:white;
-            text-decoration: none;
-            align-items: center;
-            gap:1rem;
-            padding:1rem 2rem;
-            justify-content: center;
-            // background-color:  rgb(0, 136, 204);
-            background-color:$primaryColor;
-            transition: all .2s ease-in-out;
-
-            &:hover{
-                border:1px solid transparent;
-                background-color: rgba(0, 0, 0, 0.293);
-            }
-            }
-
-        }
-        &__share{
-            width:4.5rem;
-            height: 4.5rem;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            .iconShare{
-                font-size:1.8rem;
-            }
-
-            &:hover{
-                background-color: rgba(0, 0, 0, 0.293);
-            }
-        }
-    }
-    
-    &__Text{
-        position: absolute;
-        top:60%;
-        padding:2rem;
-        color:white;
-        
-        .name{
-            font-size:5rem;
-            text-transform: uppercase;
-            font-weight: bold;
-        }
-
-        .moreText{
-            display: flex;
-            align-items: center;
-            gap:2rem;
-            margin-top: 1rem;
-            .state{
-                padding:1rem 2rem;
-                border:1px solid rgb(203, 32, 39);
-                font-size: 1.4rem;
-            }
-            .rating{
-                font-size:1.6rem;
-                text-shadow: 0 1px 10px #111;
-                display: flex;
-                gap:.5rem;
-            }
-        }
-        
-    }
-}
-.property__slider {
-    display: flex;
+  .iconLeft {
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     left: 0;
-    width: 100%;
-    transition: all 1s ease-in-out;
-    animation-delay: 1m;
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: bottom;
-        mask-image: linear-gradient(#ffff, #0000 98%);
-    }
-
-    .slider {
-        height: 46rem;
-        display: flex;
-        flex-direction: row;
-
-        &__container {
-            width: 100vw;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            .item {
-                width: 100%;
-                height: 100%;
-                position: relative;
-
-                .iconLeft {
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    left: 0;
-                    font-size: 7rem;
-                    color: white;
-                    padding:2rem;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 50%;
-                    
-                    
-                    &:hover{
-                        background-color: rgba(0, 0, 0, 0.129);
-                        cursor: pointer;
-
-                    }
-                }
-
-                .iconRight{
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    right: 0;
-                    font-size: 7rem;
-                    color: white;
-                    padding:2rem;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 50%;
-                    
-                    
-                    &:hover{
-                        background-color: rgba(0, 0, 0, 0.37);
-                        cursor: pointer;
-
-                    }
-                }
-            }
-        }
-    }
-
-
-
-
-}
-
-
-
-@keyframes sliderAnimation {
-
-    0%{
-        left:0;
-    }
-    20%{
-        left:-100vw;
-    }
-    40%{
-        left:-200vw;
-    }
-    60%{
-        left:-300vw;
-    }
-    80%{
-        left:-400vw;
-    }
-    100%{
-        left:-500vw;
-    }
-    
-}
-.propertyShare{
-    padding: 50rem 3rem 4rem 0;
+    font-size: 7rem;
+    color: white;
+    padding: 2rem;
     display: flex;
-    gap:.5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 2;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.129);
+      cursor: pointer;
+    }
+  }
+
+  .iconRight {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    font-size: 7rem;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 2;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.37);
+      cursor: pointer;
+    }
+  }
+
+  .propertyIcons {
+    position: absolute;
+    z-index: 2;
+    top:14rem;
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
     justify-content: flex-end;
-
-    @include respond(tab-port){
-        flex-wrap: wrap;
-    }
-
-
-    &--button{
-        padding:1rem 2rem;
+    gap: 1.5rem;
+    padding: 2rem 4rem 0 0;
+    &__back {
+      &--link {
         display: flex;
+        font-size: 1.4rem;
+        color: white;
+        text-decoration: none;
         align-items: center;
+        gap: 1rem;
+        padding: 1rem 2rem;
         justify-content: center;
-        gap:.6rem;
-        font-size:1.2rem;
-        color:white;
+        background-color: rgba(0, 0, 0, 0.293);
+        // background-color: ;
+        transition: all 0.2s ease-in-out;
 
-        .icon{
-            font-size:1.5rem;
+        &:hover {
+          // border: 1px solid transparent;
+          background-color: $grey;
         }
+      }
+    }
+    &__share {
+      width: 4.5rem;
+      height: 4.5rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .2s ease-in-out;
+      .iconShare {
+        font-size: 1.8rem;
+      }
 
-        transition: transform .2s ease-in-out;
-        &:hover{
-            transform: translateY(5px);
-            box-shadow: 0 2px 8px -1px black;
-            cursor: pointer;
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.293);
+      }
+    }
+  }
+  .propertyShare {
+    padding: 5rem 3rem 4rem 0;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+  
+    @include respond(tab-port) {
+      flex-wrap: wrap;
+    }
+  
+    &--button {
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      font-size: 1.2rem;
+      color: white;
+  
+      .icon {
+        font-size: 1.5rem;
+      }
+  
+      transition: transform 0.2s ease-in-out;
+      &:hover {
+        transform: translateY(5px);
+        box-shadow: 0 2px 8px -1px black;
+        cursor: pointer;
+      }
+    }
+    .Facebook {
+      background-color: rgb(59, 89, 152);
+    }
+    .Email {
+      background-color: grey;
+    }
+    .Twitter {
+      background-color: rgb(29, 161, 242);
+    }
+    .Pinterest {
+      background-color: rgb(203, 32, 39);
+    }
+    .Whatsapp {
+      background-color: rgb(77, 194, 71);
+    }
+    .Telegram {
+      background-color: rgb(0, 136, 204);
+    }
+    .plus {
+      background-color: rgb(255, 101, 80);
+    }
+  }
+  
+  .propertyDescriptionBody {
+    width: 90%;
+    margin: 0 auto;
+    .top {
+      display: flex;
+      gap:2rem;
+  
+      @include respond(tab-port) {
+        flex-direction: column;
+      }
+  
+      .propertyDescriptionBody__left {
+        flex: 4;
+        overflow: hidden;
+        margin-top: 3rem;
+  
+        .images {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          grid-template-rows: repeat(3, 175px);
+          grid-gap: 1rem;
+          @include respond(tab-land){
+              grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+          }
+  
+          img {
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+          }
+          &--1 {
+            grid-column: 1 / 2;
+            position: relative;
+            img {
+              height: 176px;
+              overflow: hidden;
+              object-fit: cover;
+              width: 100%;
+              object-position: center;
+            }
+            p {
+              font-size: 1.3rem;
+              color: rgb(255, 255, 255);
+              position: absolute;
+              text-transform: uppercase;
+              font-weight: bold;
+              padding: 1.5rem;
+              background-color: rgba(0, 0, 0, 0.572);
+              border-radius: 5rem;
+              top: 50%;
+              left: 50%;
+  
+              transform: translate(-50%, -50%);
+            }
+          }
+          &--2 {
+            grid-column: 2 / -1;
+            position: relative;
+            img {
+              height: 176px;
+              overflow: hidden;
+              object-fit: cover;
+              width: 100%;
+              object-position: center;
+            }
+            p {
+              font-size: 1.3rem;
+              color: rgb(255, 255, 255);
+              position: absolute;
+              text-transform: uppercase;
+              font-weight: bold;
+              padding: 1.5rem;
+              background-color: rgba(0, 0, 0, 0.572);
+              border-radius: 5rem;
+              top: 50%;
+              left: 50%;
+  
+              transform: translate(-50%, -50%);
+            }
+          }
+          &--3 {
+            grid-column: 1 / -1;
+            grid-row: 2 / 3;
+            position: relative;
+            img {
+              height: 176px;
+              overflow: hidden;
+              object-fit: cover;
+              width: 100%;
+              object-position: center;
+            }
+            p {
+              font-size: 2rem;
+              color: rgb(255, 255, 255);
+              position: absolute;
+              text-transform: uppercase;
+              font-weight: bold;
+              padding: 1.5rem;
+              background-color: rgba(0, 0, 0, 0.572);
+              border-radius: 5rem;
+              top: 50%;
+              left: 50%;
+  
+              transform: translate(-50%, -50%);
+            }
+          }
+  
+          &--4 {
+            grid-column: 1/2;
+            grid-row: 3 / 4;
+            position: relative;
+            img {
+              height: 176px;
+              overflow: hidden;
+              object-fit: cover;
+              width: 100%;
+              object-position: center;
+            }
+            p {
+              font-size: 1.2rem;
+              color: rgb(255, 255, 255);
+              position: absolute;
+              text-transform: uppercase;
+              font-weight: bold;
+              padding: 1.5rem;
+              background-color: rgba(0, 0, 0, 0.572);
+              border-radius: 5rem;
+              top: 50%;
+              left: 50%;
+  
+              transform: translate(-50%, -50%);
+            }
+          }
+  
+          &--5 {
+            grid-column: 2 / -1;
+            grid-row: 3 / 4;
+            position: relative;
+            img {
+              height: 176px;
+              overflow: hidden;
+              object-fit: cover;
+              width: 100%;
+              object-position: center;
+            }
+            p {
+              font-size: 1.2rem;
+              color: rgb(255, 255, 255);
+              position: absolute;
+              text-transform: uppercase;
+              font-weight: bold;
+              padding: 1.5rem;
+              background-color: rgba(0, 0, 0, 0.572);
+              border-radius: 5rem;
+              top: 50%;
+              left: 50%;
+  
+              transform: translate(-50%, -50%);
+            }
+          }
         }
+      }
+      .propertyDescriptionBody__right {
+        flex: 6;
+      }
+    }
+    .bottom {
+    }
+  }
 
+
+
+  &__Text {
+    position: absolute;
+    top: 49rem;
+    padding: 2rem;
+    color: white;
+
+    .name {
+      font-size: 5rem;
+      text-transform: uppercase;
+      font-weight: bold;
     }
-    .Facebook{
-        background-color: rgb(59, 89, 152);
+
+    .moreText {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-top: 1rem;
+      .state {
+        padding: 1rem 2rem;
+        border: 1px solid rgb(203, 32, 39);
+        font-size: 1.4rem;
+      }
+      .rating {
+        font-size: 1.6rem;
+        text-shadow: 0 1px 10px #111;
+        display: flex;
+        gap: 0.5rem;
+      }
     }
-    .Email{
-        background-color: grey;
-    }
-    .Twitter{
-        background-color:rgb(29, 161, 242);
-    }
-    .Pinterest{
-        background-color: rgb(203, 32, 39);
-    }
-    .Whatsapp{
-        background-color:rgb(77, 194, 71);
-    }
-    .Telegram{
-        background-color:rgb(0, 136, 204);
-    }
-    .plus{
-        background-color: rgb(255, 101, 80);
-    }
-    
+  }
 }
+.property__header{
+ 
+  width:100%;
+  height: 44rem;
+  position: relative;
+  overflow: hidden;
+
+  .slide{
+
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    opacity:0;
+    transition: all .5s ease;
+
+    img{
+      width: 100%;
+      height: 45rem;
+      object-fit: cover;
+      object-position: center;
+      mask-image: linear-gradient(#fff, #0000 98%);
+    }
+  }
+
+  .current{
+    opacity:1;
+    animation: slide-in .5s ease-in-out;
+  }
+      }
+
+      @keyframes slide-in {
+        
+        0%{
+          opacity:0;
+          transform: translateY(60vw);
+        }
+        100%{
+          opacity: 1;
+          transform: translate(0);
+        }
+
+      }
+    
+
+
+
+
