@@ -199,10 +199,11 @@ z-index: -1;
 //   more options styling
 
 &__moreOptions{
-    padding-top: 6rem;
+    padding-top: 5.6rem;
     display: flex;
     justify-content: space-between;
     gap:.6rem;
+    padding-bottom: 3rem;
     
     .left{
       display: flex;

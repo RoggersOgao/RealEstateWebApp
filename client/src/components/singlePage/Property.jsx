@@ -34,7 +34,6 @@ function Property({ property }) {
       : setCurrentSlide(currentSlide < img.length - 1 ? currentSlide + 1 : 0);
   };
 
-  console.log(currentSlide);
   const IL = "http://localhost:5003/images/";
   return (
     <>
@@ -155,7 +154,7 @@ area
           ):
           (
             <>
-            <img src={process.env.PUBLIC_URL + "/images/city.jpg"} alt="" srcset="" />
+            <img src={process.env.PUBLIC_URL + "/images/city.jpg"} alt="" srcSet="" />
             <p>no image upload</p>
             </>
           )}
@@ -166,7 +165,7 @@ area
           ):
           (
             <>
-            <img src={process.env.PUBLIC_URL + "/images/city.jpg"} alt="" srcset="" />
+            <img src={process.env.PUBLIC_URL + "/images/city.jpg"} alt="" srcSet="" />
             <p>no image upload</p>
             </>
           )}
@@ -177,7 +176,7 @@ area
           ):
           (
             <>
-            <img src={process.env.PUBLIC_URL + "/images/city.jpg"} alt="" srcset="" />
+            <img src={process.env.PUBLIC_URL + "/images/city.jpg"} alt="" srcSet="" />
             <p>no image upload</p>
             </>
           )}
@@ -188,7 +187,7 @@ area
           ):
           (
             <>
-            <img src={process.env.PUBLIC_URL + "/images/city.jpg"} alt="" srcset="" />
+            <img src={process.env.PUBLIC_URL + "/images/city.jpg"} alt="" srcSet="" />
             <p>no image upload</p>
             </>
           )}
@@ -199,7 +198,7 @@ area
           ):
           (
             <>
-            <img src={process.env.PUBLIC_URL + "/images/city.jpg"} alt="" srcset="" />
+            <img src={process.env.PUBLIC_URL + "/images/city.jpg"} alt="" srcSet="" />
             <p>no image upload</p>
             </>
           )}

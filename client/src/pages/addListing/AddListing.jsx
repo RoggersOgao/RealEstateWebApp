@@ -78,7 +78,7 @@ function AddListing() {
             data
           );
           response.data.map(
-            (item, index) => (
+            (item) => (
               uploads.push(item.filename)
             )
           );
@@ -96,7 +96,6 @@ function AddListing() {
           img: uploads,
         };
 
-        console.log(newForm)
         try {
           const listingResponse = await lsR.post("/api/listings", newForm);
           console.log(listingResponse);

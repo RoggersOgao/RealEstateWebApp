@@ -20,9 +20,11 @@ function Login() {
             [field]:value
         })
     }
+    const [isLoading, setIsLoading] = useState(false)
     const handleSubmit = async(e) => {
         e.preventDefault()
         try{
+            setIsLoading(true)
             const response = await ps.post("/login", {
                 "email":form.email || "",
                 "password":form.password || "",     
@@ -31,6 +33,7 @@ function Login() {
                 type:"USER_DATA",
                 payload:response.data
             })
+            setIsLoading(false)
              window.location = "/"
              setForm({})
          }catch(err){
@@ -115,7 +118,7 @@ function Login() {
                 <div className="formgroup">
                     <div className="btnCont">
                     <div className="btngroup">
-                        <button type="submit">Login <FaPaperPlane className="icons"/></button>
+                        <button type="submit" disabled={isLoading}>{isLoading ? "Loading..." : "Login"} <FaPaperPlane className="icons"/></button>
                     </div>
                     </div>
                 </div>

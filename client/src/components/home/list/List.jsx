@@ -6,6 +6,7 @@ import { fetchListing } from '../../context/listing/ListingActions'
 import Card from '../../card/Card';
 import Pagination from '../../pagination/Pagination'
 import Dropdown from '../../dropdown/Dropdown';
+import Skeleton from '../../skeleton/Skeleton'
 
 
 
@@ -73,15 +74,20 @@ function List() {
         setBathrooms(bathrooms + 1)
     }
    
+    const [isLoading, setIsLoading] = useState(true)
     useEffect(()=>{
+
         localStorage.setItem("page",JSON.stringify(currentPage))
         const data = async()=> {
+            setIsLoading(true)
             const response = await fetchListing()
 
             dispatch({
                 type:"LISTING_DATA",
                 payload: await response.data
             })
+            setIsLoading(false)
+
         }
         data()
 
@@ -107,11 +113,11 @@ if(form.propertyState === "For Rent"){
 // type of the property
 if(form.propertyType === "Office"){
     data = data.filter((item)=> item.propertyType === "office")
-}else if (form.propertyType === "home"){
+}else if (form.propertyType === "Home"){
     data = data.filter((item) => item.propertyType === "home")
-}else if (form.propertyType === "condominium"){
+}else if (form.propertyType === "Condominium"){
     data = data.filter((item) => item.propertyType === "condominium")
-}else if (form.propertyType === "apartment"){
+}else if (form.propertyType === "Apartment"){
     data = data.filter((item) => item.propertyType === "apartment")
 }else{
     data = data.filter((item) => item.propertyType === "home" || "apartment" || "condominium" || "office")
@@ -204,7 +210,7 @@ const handleRange = (e) =>{
                 <div className="formgroup">
                     <label htmlFor="">For Rent/Sale</label>
                     <Dropdown type={"allProperties"}
-                    value = {form.propertyType || ''}
+                    value = {form.propertyState || ''}
                     select={(value)=>setField("propertyState", value)}/>
                 </div>
                 {/* `
@@ -213,7 +219,7 @@ const handleRange = (e) =>{
                 <div className="formgroup">
                     <label htmlFor="">Type of Property</label>
                     <Dropdown type={"typeOfProperty"}
-                    value = {form.property || ''}
+                    value = {form.propertyType || ''}
                     select={(value)=>setField("propertyType", value)}/>
                 </div>
                 {/* 
@@ -320,11 +326,16 @@ const handleRange = (e) =>{
         </div>
         <div className="list__right">
             
+            {isLoading ? <Skeleton type="feed"/> :(
             <div className="list__right--card"> 
                 {currentItems.map((item,index)=>(
+                    
                     <Card listing={item} key={index} handleHeartClick={handleHeartClick} />
+                    
                 ))}
             </div>
+
+            )}
                 <Pagination 
                 dataList={data} 
                 currentPage={currentPage} 

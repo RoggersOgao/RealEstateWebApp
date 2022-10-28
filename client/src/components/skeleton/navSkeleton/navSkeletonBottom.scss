@@ -1,0 +1,260 @@
+@import "../../../sass/main.scss";
+
+    
+    // bottomSkel area
+    .activeColor{
+        background-color: $bodyColor;
+    }
+    .bottomSkel{
+        position: relative;
+        display: flex;
+        position:sticky;
+        top:4.7rem;
+        z-index: 4;
+        justify-content: space-between;
+        align-items: center;
+        height: 9.9rem;
+        padding: 0 5.4rem;
+        background-color:rgb(22, 22, 22);
+        @include respond(phone){
+            padding: 0 2.5rem;
+        }
+        border-bottom: .3px solid $borderGrey;
+
+        // styling the logo
+        &__logo{ 
+            animation: blink 2s ease-in infinite alternate;
+            width:7rem;
+                height: 5.6rem;   
+                background-color: $skelColor;
+        }
+
+        // styling the nav links
+        &__nav{
+            
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: flex-end;
+            animation: moveInRight 1s ease-in-out;
+            .menubar{
+                display: flex;
+                flex-direction: column;
+                cursor:pointer;
+                opacity:0;
+                visibility: hidden;
+                display:none;
+                gap:.6rem;
+                span:nth-child(1){
+                    border:1px solid rgba(60, 60, 60, 0.093);
+                    width:1.5rem;
+                }
+                span:nth-child(2){
+                    border:1px solid rgba(60, 60, 60, 0.093);
+                    width:2rem;
+                }
+                span:nth-child(3){
+                    border:1px solid rgba(60, 60, 60, 0.093);
+                    width:2.5rem;
+                }
+
+
+                @include respond(tab-port){
+                    opacity: 1;
+                    visibility: visible;
+                    display:flex;
+                    align-items: flex-start
+                }
+            }
+            ul{
+                animation: blink 2s ease-in infinite alternate;
+                display: flex;
+                align-items: center;  
+                position: relative; 
+                gap:1rem;
+                .ISnavLink{
+                    
+                    list-style: none;
+                    cursor: pointer;
+                    padding:1.3rem 2rem;
+                    transition: all .3s ease-in-out;
+                    width:10rem;
+                height: 2rem;   
+                background-color: $skelColor;
+                    .menubar{
+
+                display: flex;
+                flex-direction: column;
+                cursor:pointer;
+                opacity:0;
+                visibility: hidden;
+                display:none;
+                gap:.6rem;
+                span:nth-child(1){
+                    border:1px solid $lightGrey;
+                    width:1.5rem;
+                }
+                span:nth-child(2){
+                    border:1px solid $lightGrey;
+                    width:2rem;
+                }
+                span:nth-child(3){
+                    border:1px solid $lightGrey;
+                    width:2.5rem;
+                }
+
+
+                @include respond(tab-port){
+                    opacity: 1;
+                    visibility: visible;
+                    display:flex;
+                    align-items: flex-start
+                }
+            }
+
+                    @include respond(tab-port){
+                        display:none;
+                        opacity: 0;
+                        visibility: hidden;
+                        }
+                }
+                .heartIcon{
+                    height: 3rem;
+                    width: 3rem; 
+                   background-color: $skelColor;
+
+                    span{
+                        color:$altBodyColor;
+                        width:2rem;
+                        height: 2rem;
+                        border-radius: 50%;
+                        background-color: $primaryColor;
+                        position: absolute;
+                        top:.5rem;
+                        left:.5rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: bold;
+                    }
+                }
+                .cartSectionDiv{
+                    margin-right: 1rem;
+                    position: relative;
+                    padding:0;
+                    width:3rem;
+                    height: 3rem;
+
+                    @include respond(tab-port){
+                        display:block;
+                        opacity:1;
+                        visibility:visible;
+                    }
+                }
+                .lastChild{
+                    width: 10rem;
+                    border-radius: 1rem;
+                height: 4.5rem;   
+                background-color: $skelColor;
+                }
+
+               
+                .cardContainerBar{
+                    height: 70vh;
+                    position: absolute;
+                    top: 7.3rem;
+                    border: 0.3px solid #7070702f;
+                    width: 40rem;
+                    right: -0.6rem;
+                    background-color: $altBodyColor;
+                    border-radius: 1rem;
+                    box-shadow: 1px 8px 25px -4px rgb(12, 7, 0);
+                    
+                    z-index:1;
+                   
+                    @include respond(tab-port){
+                        right:1.5rem;
+                        width:40rem;
+                    }
+                    @include respond(phone){
+                        right:1.5rem;
+                        width:40rem;
+                    }
+                    .data{
+                        height: 100%;
+                        overflow: scroll;
+                        scroll-snap-align: center;
+                        scrollbar-width: .3px;
+                        z-index:100;
+                }
+            }
+            }
+
+
+
+
+            // styling the active menu bar
+
+
+            .activeContainer{
+                position:fixed;
+                background-color:$altBodyColor;
+                min-height: 100vh;
+                right:0;
+                top:0;
+                width:30rem;
+                padding:2rem;
+                animation: moveInRight .4s ease-in-out;
+                
+                .menubarActive{
+                    font-size:3rem;
+                    display: flex;
+                    justify-content: flex-end;
+                    padding:2rem 0;
+                    color:white;
+                    cursor: pointer;
+                }
+                .ISnavLinkActive{
+                    list-style-type: none;
+                    padding:2rem;
+                    width: 100%;
+                    .navLink{
+                        font-size:1.6rem;
+                        text-decoration:none;
+                        color:$lightGrey;
+                        display: flex;
+                        gap:1rem;
+                        align-items: center;
+                    }
+                    animation: moveInRight .7s ease-in-out;
+                    &:hover{
+                        background-color: rgba(128, 128, 128, 0.205);
+                        border-radius: 1rem;
+
+
+                    }
+                }
+            }
+        }
+
+    }
+
+    @keyframes moveInRight {
+        0%{
+            opacity:0;
+            transform: translateX(20rem);
+        }
+        100%{
+            opacity:1;
+            transform: translate(0);
+        }
+        
+    }
+
+    @keyframes blink {
+        to{
+            opacity:.5;
+            transform: scale(1.001);
+        }
+        
+    }

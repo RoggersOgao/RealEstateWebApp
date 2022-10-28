@@ -1,0 +1,209 @@
+
+@import "../../sass/main.scss";
+
+.setting{
+    
+    &__nav{
+    z-index:4;
+    position:sticky;
+    top:0;
+    }
+    &__header{
+        z-index:1;
+    }
+
+
+
+  &__top{
+    width:80%;
+    margin:3rem auto;
+    display: flex;
+    align-items: center;
+
+    &--left{
+        display: flex;
+        flex-direction: column;
+        
+        align-items: center;
+        justify-content: center;
+        flex:2;
+
+        .back{
+            padding:2rem 0;
+            .link{
+                font-size:1.4rem;
+                color:white;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                gap:.7rem;
+                text-decoration: none;
+            }
+            .icon{
+    
+            }
+
+        }
+        .imgContainer{
+            
+            img{
+
+            }
+            .settingsProfile{
+                width: 20rem;
+                height: 20rem;
+                border: 1px solid white;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                font-size:8rem;
+                font-weight: bold;
+                color:white;
+            }
+        }
+
+    }
+
+    &--right{
+        flex:5;
+
+        .top{
+            display: flex;
+            align-items: center;
+            gap:1rem;
+            font-size:1.5rem;
+            color:white;
+            font-weight: bold;
+            .textuser{
+                font-size:1.3rem;
+                font-weight: normal;
+                background-color: rgb(12, 113, 1);
+                padding:.2rem 1rem;
+                border-radius:7px
+
+            }
+            .textemail{
+                font-size:1.3rem;
+                font-weight: normal;
+                background-color: rgb(54, 54, 54);
+                padding:.2rem 1rem;
+                border-radius:7px
+            }
+
+
+        }
+        .middle{
+            &__container{
+                width:14rem;
+                margin:2rem 0;
+                border:1px solid rgba(255, 238, 0, 0.164);
+                    border-image: linear-gradient(45deg, rgb(255, 0, 0) , yellow, green);
+                    border-image-slice: 1;
+                    padding:1rem 2rem;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size:1.3rem;
+                    font-weight: bold;
+                    color:white;
+                    gap:1rem;
+            }
+        }
+        .bottomprofile{
+display: flex;
+gap:.5rem;
+
+.text{
+    font-size:1.2rem;
+    color:grey;
+}
+            .left{
+                flex:1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size:1.4rem;
+            color:white;
+            font-weight: bold;
+            box-shadow: 0 2px 8px -4px black;
+            border:.3px solid rgba(1, 189, 45, 0.134);
+            padding:2rem 0;
+            }
+            .middle{
+                flex:1;
+                display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size:1.4rem;
+            color:white;
+            font-weight: bold;
+            box-shadow: 0 2px 8px -4px black;
+            border:.3px solid #ff99003b;
+            padding:2rem 0;
+            }
+            .right{
+                flex:1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size:1.4rem;
+            color:white;
+            font-weight: bold;
+            border:.3px solid rgba(1, 189, 45, 0.134);
+            box-shadow: 0 2px 8px -4px black;
+            padding:2rem 0;
+            }
+            
+
+
+        }
+
+
+    }
+  } 
+
+
+  &__middle{
+    width:80%;
+    margin:3rem auto;
+    &--btngroup{
+        border: .3px solid $borderGrey;
+        border-top:2px solid rgb(0, 169, 0);
+        border-radius: 12px 12px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    button{
+        background:none;
+        border:none;
+        padding:1rem 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color:white;
+        font-weight: bold;
+        gap:1rem;
+        font-size:1.4rem;
+        &:not(:last-child){
+            border-right: 1px solid $borderGrey;
+        }
+
+        &:hover{
+            background-color: $borderGrey;
+        }
+        
+    }
+
+    .active{
+        background-color: $borderGrey;
+    }
+  }
+}

@@ -124,15 +124,19 @@ router.get("/:id", async (req, res) => {
 
 //GET ALL ListingS
 router.get("/", async (req, res) => {
-  const username = req.query.user;
+  const username = req.query.u;
   const propertyState = req.query.propertyState;
+  const property = req.query.p;
   try {
     let listings;
     if (username) {
       listings = await Listing.find({ userId: username });
     } else if (propertyState) {
       listings = await Listing.find({ propertyState: propertyState });
-    } else {
+    }  else if(property){
+      listings = await Listing.find({ _id:property})
+    }
+    else {
       listings = await Listing.find();
     }
     res.status(200).json(listings);

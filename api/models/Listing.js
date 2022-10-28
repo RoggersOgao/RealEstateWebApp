@@ -24,7 +24,7 @@ propertyName:{
 },
 address:{
     type:String,
-    required:true
+    required:true,
 },
 location:{
     type:String,

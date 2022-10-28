@@ -1,6 +1,5 @@
 import "./form.scss";
 import Dropdown from "../../dropdown/Dropdown";
-import axios from "axios";
 function Form({
   setField,
   features,

@@ -1,0 +1,178 @@
+@import "../../sass/main.scss";
+
+
+.cardSkel{
+    transition: all .2s ease;
+    animation: Skeletonblink 1s ease-in-out infinite alternate;
+    margin-top: 2.5rem;
+    height: 24rem;
+    display: flex;
+    align-items: center;
+    background-color:rgb(22, 22, 22);
+    &__left{
+        position: relative;
+        flex:2;
+        height: 24rem;
+        background-color: rgba(60, 60, 60, 0.093);
+        @include respond(tab-land){
+            height:19rem;
+        }
+        @include respond(tab-port){
+            height:23rem;
+        }
+        @include respond(phone){
+            height:19rem;
+        }
+
+    }
+    &__right{
+        flex:3;
+        
+        .top{
+            display: flex;
+            justify-content: space-between;
+            margin: 1rem;
+            .text{
+                width:4rem;
+
+                padding:1rem 2rem;
+                display: flex;
+                background-color: rgba(60, 60, 60, 0.093);
+                align-items: center;
+            }
+
+        }
+        .middle{
+            
+            &__title{
+                margin: 1rem;
+width:34rem;
+height: 4rem;
+background-color:  rgba(60, 60, 60, 0.093);
+                
+                padding:1.5rem 0 1rem 2rem;
+                @include respond(tab-land){
+                    padding:1rem 0 0 1rem;
+                    font-size:1.5rem;
+                }
+                @include respond(tab-port){
+                    padding:1rem 0 0 1rem;
+                    font-size:1.8rem;
+                }
+                @include respond(phone){
+                    padding:1rem 0 0 1rem;
+                    font-size:1.5rem;
+                }
+            }
+            &__location{
+                font-size:1.4rem;
+                margin: 1rem;
+                padding:0 0 2.5rem 2rem;
+                background-color:rgba(60, 60, 60, 0.093);
+                @include respond(tab-land){
+                    padding:1rem 0 2rem 1rem;
+                    font-size:1.2rem;
+                }
+                @include respond(tab-port){
+                    padding:1rem 0 2rem 1rem;
+                    font-size:1.3rem;
+                }
+                @include respond(phone){
+                    padding:1rem 0 2rem 1rem;
+                    font-size:1.2rem;
+                }
+            }
+            &__others{
+                display: flex;
+                width: 100%;
+                padding:0 2rem;
+                column-gap:3rem;
+    
+                @include respond(tab-land){
+                    padding:0 0 0 1rem;
+                }
+                @include respond(tab-port){
+                    padding:0 0 0 1rem;
+                }
+                @include respond(phone){
+                    padding:0 0 0 1rem;
+                }
+               
+                .shower{
+                    display: flex;
+                    align-items: center;
+                    gap:1rem;
+                    background-color:  rgba(60, 60, 60, 0.093);
+                    width:5rem;
+                    height: 3rem;
+                }
+                .bedroom{
+                    display: flex;
+                    align-items: center;
+                    gap:1rem;
+                    background-color:  rgba(60, 60, 60, 0.093);
+                    width:5rem;
+                    height: 3rem;
+                    
+                }
+                .size{
+                    display: flex;
+                    align-items: center;
+                    gap:1rem;
+                    background-color:  rgba(60, 60, 60, 0.093);
+                    width:5rem;
+                    height: 3rem;
+                    
+                }
+            }
+        }
+        .bottomcardSkel{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap:3rem;
+           
+            padding:3rem 2rem 1rem 2rem;
+            @include respond(tab-land){
+                padding:2rem 1rem 1rem 1rem;
+            }
+            @include respond(tab-port){
+                padding:2rem 1rem 1rem 1rem;
+            }
+            @include respond(phone){
+                padding:2rem 1rem 1rem 1rem;
+            }
+            &__left{
+                flex:1;
+                background-color:  rgba(60, 60, 60, 0.093);
+                width:3rem;
+                height: 3rem;
+                display: flex;
+                justify-content: space-between;
+            }
+            &__right{
+                flex:1;
+                display: flex;
+                justify-content: flex-end;
+                background-color:  rgba(60, 60, 60, 0.093);
+                width:3rem;
+                height: 3rem;
+            }
+        }
+    
+    }
+}
+
+
+
+@keyframes Skeletonblink {
+    
+    0%{
+        opacity:.5;
+        transform: scale(1);
+    }
+    100%{
+        opacity:1;
+        transform: scale(1.0001);
+    }
+}

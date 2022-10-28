@@ -1,2 +1,109 @@
 @import "../../../sass/main.scss";
 
+.comments{
+    width:90%;
+    margin:0 auto;
+    &__title{
+        padding: 2rem;
+    border-top:.3px solid $borderGrey;
+    border-bottom:.3px solid $borderGrey;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    color:white;
+    letter-spacing: 1px;
+    }
+
+    .form{
+padding:3rem;
+        .formgroup{
+
+            display: flex;
+            align-items: center;
+            gap:2rem;
+            &__left{
+                img{
+                    width:4rem;
+                    height: 4rem;
+                    border-radius: 50%;
+                }
+
+                .profileAnottation{
+                    width:9rem;
+                    height: 9rem;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size:4rem;
+                    color:white;
+                    font-weight: bold;
+                }
+            }
+
+            &__right{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                input{
+                    border: none;
+                    border-bottom: 1px solid $lightGrey;
+                    width:70%;
+                    background: none;
+                    color:white;
+                    padding:1rem 0;
+                    position: relative;
+                        &:focus{
+                        outline:none;
+                    }
+                    z-index:1;
+
+                }
+              .underline{
+                position: absolute;
+                width: 70%;
+                border: 1px solid white;
+                transform: scaleX(0);
+                transition: transform .4s ease-in-out;
+
+
+                }
+                input:focus ~ .underline{
+                    transform: scaleX(1);
+                }
+                
+
+                .buttongrp{
+                    width:42%;
+                    margin:0 auto;
+                    display: flex;
+                    justify-content: flex-end;
+                    
+                    button{
+                        padding:.61rem 2rem;
+                        border: none;
+                        background-color: $primaryColor;
+                        color:white;
+                        font-weight: bold;
+                        margin: 1rem 1rem;    
+                        transition: background-color .3s ease-in-out;
+                        &:hover{
+                            cursor: pointer;
+                            background-color: grey;
+                        }
+                    }
+
+                }
+
+            }
+
+        }
+    }
+    
+}

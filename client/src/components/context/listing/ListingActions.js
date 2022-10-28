@@ -19,3 +19,22 @@ export const fetchSingleListing = async(id)=> {
     return response
 }
 
+export  const searchProperty = async (text) => {
+    const params = new URLSearchParams({
+        q: text
+    })
+    // const response = await fetch(`${process.env.REACT_APP_GITHUB_URL}/api/listings?${params}`,{
+    //     headers: {
+    //         Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`
+    //     }
+    // })
+
+    // const {items} = await response.json()
+// http://localhost:5003/api/listings?post=6353b6ea545958dbabee879b
+
+    const response = await ls.get(`/api/listings?post=${params}`)
+
+   return response.data.items
+  
+}
+

@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react'
+import React, {useContext} from 'react'
 import Nav from '../../components/nav/NavTop'
 import Header from '../../components/home/header/Header';
 import "./home.scss"

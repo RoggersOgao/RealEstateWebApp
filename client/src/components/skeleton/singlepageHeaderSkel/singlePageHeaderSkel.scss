@@ -1,0 +1,278 @@
+@import "../../../sass/main.scss";
+
+.sPageHeaderSkel {
+  margin-top: 2.55rem;
+  &__title {
+    border-left: 5px solid $skelColor;
+    padding: 2rem;
+    .name {
+        width:20rem;
+        height: 3rem;
+        background-color: $skelColor;
+    }
+    .username {
+      height: 2rem;
+      margin:1rem 0 0 0;
+      width:10rem;
+        background-color: $skelColor;
+    }
+  }
+
+  &__description {
+    margin: 3rem;
+    .description {
+        width: 100%;
+        height:15rem;
+      background-color: $skelColor;
+    }
+    .otherfeatures {
+      margin-top: 5rem;
+      padding-left: 7rem;
+      .location {
+position: relative;
+margin-bottom: 6rem;
+
+
+.text{
+position: absolute;
+padding-top: 1.6rem;
+padding-left:5rem;
+
+&::before{
+    content: "";
+    width:8rem;
+    position: absolute;
+    height:0;
+    left:-4rem;
+    top:2.4rem;
+    border: .3px solid $skelColor;
+}
+}
+
+
+        &::before{
+            content: "";
+            width:1.6rem;
+            height: 1.6rem;
+            background-color: $skelColor;
+            border-radius: 50%;
+            position: absolute;
+            top:33%;
+            transform: translateY(-50%);
+            left:-5rem;
+        }
+
+        &::after{
+            content: "";
+height: 8rem;
+border: .3px solid $skelColor;
+position: absolute;
+left: -36px;
+top: 14px;
+z-index: -1;
+        }
+        .location__title {
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+          width:7rem;
+height: 2rem;
+background-color: $skelColor;
+        }
+
+        width:7rem;
+height: 2rem;
+background-color: $skelColor
+        
+      }
+      .bedrooms {
+        position: relative;
+margin-bottom: 6rem;
+        font-size: 1.4rem;
+        color: white;
+
+
+        .text{
+            position: absolute;
+            padding-top: 1.6rem;
+            padding-left:5rem;
+            font-size:1.6rem;
+            color:$primaryColor;
+            width:7rem;
+height: 2rem;
+background-color: $skelColor;
+            &::before{
+                content: "";
+                width:8rem;
+                position: absolute;
+                height:0;
+                left:-4rem;
+                top:2.4rem;
+                border: .3px solid $skelColor;
+            }
+            }
+        &::before{
+            content: "";
+            width:1.6rem;
+            height: 1.6rem;
+            background-color: $skelColor;
+            border-radius: 50%;
+            position: absolute;
+            top:46%;
+            transform: translateY(-50%);
+            left:-5rem;
+        }
+
+        &::after{
+            content: "";
+height: 8rem;
+border: .3px solid $skelColor;
+position: absolute;
+left: -36px;
+top: 14px;
+z-index: -1;
+        }
+        &__title {
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+        }
+        img {
+          width: 2rem;
+        }
+      }
+      .bathrooms {
+        position: relative;
+        width:7rem;
+height: 2rem;
+background-color: $skelColor;
+
+        .text{
+            position: absolute;
+            padding-top: 1.6rem;
+            padding-left:5rem;
+            font-size:1.6rem;
+            color:$primaryColor;
+            &::before{
+                content: "";
+                width:8rem;
+                position: absolute;
+                height:0;
+                left:-4rem;
+                top:2.4rem;
+                border: .3px solid $skelColor;
+            }
+            }
+
+        &::before{
+            content: "";
+            width:1.6rem;
+            height: 1.6rem;
+            background-color: $skelColor;
+            border-radius: 50%;
+            position: absolute;
+            top:33%;
+            transform: translateY(-50%);
+            left:-5rem;
+        }
+        &::after{
+            content: "";
+height: 2.7rem;
+border: .3px solid $skelColor;
+position: absolute;
+left: -36px;
+top: 14px;
+z-index: -1;
+        }
+        &__title {
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+        }
+
+        img {
+          width: 2rem;
+        }
+      }
+    }
+  }
+
+
+
+
+//   more options styling
+
+&__moreOptions{
+    padding-top: 5.6rem;
+    display: flex;
+    justify-content: space-between;
+    gap:.6rem;
+    padding-bottom: 3rem;
+    
+    .left{
+      display: flex;
+      gap:.6rem;
+      &--button{
+  
+        padding:1rem 2rem;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        gap:1rem;
+        color:white;
+        font-weight: bold;
+        width:8rem;
+height: 3rem;
+background-color: $skelColor;
+  
+    }
+
+    
+    .state{
+        background-color: rgba(77, 194, 71, .1);
+
+    }
+    .type{
+        background-color: rgba(128, 128, 128, 0.1);
+    }
+    .rating{
+        background-color: rgba(255, 101, 80, .1);
+    }
+    .created{
+        background-color: rgba(0, 136, 204, .1);
+    }
+    .price{
+        font-size: 1.4rem;
+        background-color: rgba(203, 32, 39, .1);
+    }
+    }
+
+    .right{
+      &--button{
+        .link{
+          padding:1rem 2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap:1rem;
+          color:white;
+          font-size: 1.2rem;
+          font-weight: bold;
+          text-decoration: none;
+          transition: all .3s ease-in-out;
+
+          &:hover{
+            background-color: $grey;
+          }
+
+        }
+  
+    }
+    .contact{
+      background-color: $primaryColor;
+    }
+
+    }
+}
+}
