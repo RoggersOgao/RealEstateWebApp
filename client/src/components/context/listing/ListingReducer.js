@@ -17,6 +17,11 @@ const ListingReducer = (state, action) => {
                 ...state,
                 singleProperty:action.payload
             }
+        case "USER_PROPERTIES":
+            return{
+                ...state,
+                userProperties:action.payload
+            }
             default:
             return state
     }

@@ -1,0 +1,72 @@
+@import "../../../sass/main.scss";
+
+.notifications{
+margin-top: 2rem;
+background-color: $altBodyColor;
+padding:2rem 3rem;
+border-radius: 1rem;
+box-shadow: 1px 4px 12px -2px rgba(0, 0, 0, 0.291);
+    .container{
+display: flex;
+gap:2rem;
+justify-content: center;
+
+
+        &__left{
+            img{
+                width:8rem;
+                height: 8rem;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 50%;
+            }
+        }
+
+        &__right{
+
+            &--top{
+                display: flex;
+                justify-content: space-between;
+
+                .left{
+                    font-size:1.6rem;
+                    color:white;
+                    font-weight: bold;
+                    display: flex;
+                    gap:1rem;
+                    flex-direction: column;
+
+                    .contact{
+                        display: flex;
+                        gap:1rem;
+                        .email{
+                            color: grey;
+                            font-size:1.3rem;
+                            border-radius: 2rem;
+                            font-weight: 700;
+                        }
+                        .phone{
+                            color: grey;
+                            font-size:1.3rem;
+                            border-radius: 2rem;
+                            font-weight: 700;
+                        }
+                    }
+
+                }
+
+                .right{
+                    font-size:1.4rem;
+                }
+            }
+
+            &--bottom{
+                font-size:1.4rem;
+                color:grey;
+                padding:1rem 0;
+            }
+
+        }
+
+    }
+}

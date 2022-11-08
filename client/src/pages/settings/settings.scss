@@ -20,6 +20,11 @@
     display: flex;
     align-items: center;
 
+    @include respond(tab-port){
+        flex-direction: column;
+        width:90%;
+    }
+
     &--left{
         display: flex;
         flex-direction: column;
@@ -27,6 +32,8 @@
         align-items: center;
         justify-content: center;
         flex:2;
+
+        
 
         .back{
             padding:2rem 0;
@@ -39,16 +46,20 @@
                 gap:.7rem;
                 text-decoration: none;
             }
-            .icon{
-    
-            }
-
         }
         .imgContainer{
-            
-            img{
+            width: 20rem;
+                height: 20rem;
+                
+.settingsTopImg{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    border-radius: 50%;
 
-            }
+}
             .settingsProfile{
                 width: 20rem;
                 height: 20rem;
@@ -68,7 +79,8 @@
 
     &--right{
         flex:5;
-
+        margin: 4rem 0 2rem 0;
+        width: 85%;
         .top{
             display: flex;
             align-items: center;
@@ -172,6 +184,9 @@ gap:.5rem;
   &__middle{
     width:80%;
     margin:3rem auto;
+    @include respond(tab-port){
+        width:90%;
+    }
     &--btngroup{
         border: .3px solid $borderGrey;
         border-top:2px solid rgb(0, 169, 0);
@@ -180,8 +195,20 @@ gap:.5rem;
         align-items: center;
         justify-content: center;
         height: 100%;
+
+        @include respond(tab-port){
+            flex-direction: column;
+        }
     }
     button{
+
+        @include respond(tab-port){
+            width:100%;
+            &:first-child{
+                border-radius: 8px 8px 0 0;
+                overflow: hidden;
+            }
+        }
         background:none;
         border:none;
         padding:1rem 3rem;
@@ -192,6 +219,8 @@ gap:.5rem;
         font-weight: bold;
         gap:1rem;
         font-size:1.4rem;
+
+        
         &:not(:last-child){
             border-right: 1px solid $borderGrey;
         }
@@ -203,7 +232,103 @@ gap:.5rem;
     }
 
     .active{
-        background-color: $borderGrey;
+        background-color: rgb(0, 172, 0);
+    }
+  }
+
+  &__bottom{
+    @include respond(tab-port){
+        margin-top: 30rem;
+    }
+    .updatePasswordSection{
+width:80%;
+margin:0 auto;
+border:.3px solid $borderGrey;
+border-radius: 12px 12px 0 0;
+border-top:2px solid rgb(0, 169, 0);
+
+@include respond(tab-port){
+    width:90%
+}
+        .link{
+padding:1rem 3rem;
+font-size:1.4rem;
+display: flex;
+align-items: center;
+gap:1rem;
+font-weight: bold;
+            .icon{
+font-size:3rem;
+            }
+            span{
+                color:$primaryColor;
+            }
+        }
+    }
+
+    .passwordForm{
+        width:80%;
+        
+        margin:0 auto;
+
+        
+        .passwordGroup{
+
+            .formgroup{
+                display: flex;
+                flex-direction: column;
+                width:30%;
+                margin-top: 1rem;
+
+                @include respond(tab-port){
+                    width:60%;
+                }
+
+                @include respond(phone){
+                    width:80%;
+                }
+                label{
+                    font-size:1.4rem;
+                    color:white;
+                    font-weight: bold;
+                    padding:1.5rem 0;
+                    display: flex;
+                    align-items: center;
+                    gap:1rem;
+                }
+                input{
+                    padding:.9rem;
+                    font-size:1.4rem;
+                    color:white;
+                    background:none;
+                    border:.3px solid $borderGrey;
+                    background-color: $altBodyColor;
+
+                    &:focus{
+                        outline:none;
+                    }
+                }
+
+
+                .passwordGroupContainer{
+
+                    .buttonContainer{
+display: flex;
+justify-content: flex-end;
+
+                        button{
+                            border-radius: 13rem;
+                            padding:1rem 2rem;
+                            color:white;
+                            font-weight: bold; 
+                            margin-top: 2rem;
+                            background-color: $primaryColor;
+                            border:none;
+                        }
+                    }
+                }
+            }
+        }
     }
   }
 }

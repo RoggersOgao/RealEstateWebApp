@@ -25,6 +25,7 @@ if(state.user === null){
     <Router>
     <div className="App">
       <Routes>
+      {/* <Route path="/" element={<Home /> } /> */}
       <Route path="/" element={user ? <Home /> : <Login />} />
       <Route path="/listing" element={user ? <AddListing /> : <Login />} />
       <Route path="/listing/:propertyId" element={user ? <SinglePage /> : <Login />} />

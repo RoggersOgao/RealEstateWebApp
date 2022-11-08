@@ -1,5 +1,5 @@
-import React from "react";
-import { FaBuilding, FaCalendar, FaKey, FaMoneyBill, FaPhoneAlt, FaStar } from "react-icons/fa";
+import React,{useState, useRef, useEffect} from "react";
+import { FaBuilding, FaCalendar, FaEnvelope, FaKey, FaMoneyBill, FaPaperclip, FaPaperPlane, FaPhoneAlt, FaStar, FaTimes, FaTrophy, FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./singlePageHeader.scss";
 function SinglePageHeader({
@@ -20,6 +20,52 @@ function SinglePageHeader({
  {
 
     const created = new Date(createdAt).toDateString()
+
+
+    // modal Form state
+    const [openModal, setOpenModal] = useState(false)
+    const contactRef = useRef()
+
+useEffect(()=>{
+
+  const handler = (e) => {
+
+    try{
+      const formArea = contactRef.current.contains(e.target)
+  
+      if(!formArea){
+        setOpenModal(false)
+      }
+
+    }catch(error){}
+  }
+
+
+  document.addEventListener("mousedown", handler)
+
+
+  return () => {
+document.removeEventListener("mousedown",handler)
+  }
+},[])
+
+
+
+
+// manage the form data
+
+
+const [form, setForm] = useState([])
+
+
+const setField = (field,value)=>{
+  setForm({
+    ...form,
+    [field]:value
+  })
+}
+
+console.log(form)
   return (
     <div className="sPageHeader">
       <div className="sPageHeader__title">
@@ -91,13 +137,47 @@ function SinglePageHeader({
         </div>
 
         <div className="right">
-        <div className="right--button contact" >
+        <div className="right--button contact" onClick={()=>setOpenModal(true)} >
             <Link to="" className="link">
             <FaPhoneAlt className="icon"/>
                Contact Me </Link>
         </div>
         </div>
       </div>
+
+
+{openModal && (
+      <div className="sPageHeader__modal">
+
+        <div className="formContainer" ref={contactRef}>
+      <form action="" className="form" >
+        <div className="close" onClick={()=>setOpenModal(false)}>
+          <FaTimes />
+        </div>
+        <div className="formgroup">
+          <label htmlFor=""><FaUser />Name</label>
+          <input type="text" name="" id="" value={form.name || ""} onChange={(e)=>setField("name", e.target.value)}/>
+        </div>
+        <div className="formgroup">
+          <label htmlFor=""><FaEnvelope /> Email</label>
+          <input type="email" name="" id=""value={form.email || ""} onChange={(e)=>setField("email", e.target.value)} />
+        </div>
+        <div className="formgroup">
+          <label htmlFor=""><FaPaperclip />Description</label>
+          <textarea name="" id="" cols="30" rows="10" value={form.msg || ""} onChange={(e)=>setField("msg", e.target.value)}></textarea>
+        </div>
+
+        <div className="formgroup">
+          <div className="btngroup">
+            <button type="submit">Send Message <FaPaperPlane /></button>
+          </div>
+        </div>
+      </form>
+
+        </div>
+      </div>
+
+)}
     </div>
   );
 }

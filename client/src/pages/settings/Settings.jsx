@@ -3,22 +3,69 @@ import "./settings.scss";
 import LoginContext from "../../components/context/auth/loginContext/LoginContext";
 import Nav from "../../components/nav/NavTop";
 import NavBottom from "../../components/nav/NavBottom";
+import axios from 'axios'
 import {
   FaArrowLeft,
   FaBell,
   FaBookDead,
   FaBuilding,
   FaChartArea,
+  FaCube,
+  FaExclamationCircle,
+  FaEye,
   FaUser,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import UserInfo from "../../components/settingspageComp/userInfo/UserInfo";
+import Footer from "../../components/footer/Footer";
+import SingleUserProperty from "../../components/settingspageComp/property/SingleUserProperty";
+import Analytics from "../../components/settingspageComp/analytics/Analytics";
+import Notification from "../../components/settingspageComp/notification/Notification";
+import Alert from "../../components/alerts/Alert";
+import AlertContext from "../../components/context/alerts/AlertContext";
 function Settings() {
   const [resourceType, setResourceType] = useState("userInfo");
   const { state } = useContext(LoginContext);
+  const {setAlert} = useContext(AlertContext)
+  const [form, setForm] = useState([]);
+  const setField = (field, value) => {
+    setForm({
+      ...form,
+      [field]: value,
+    });
+  };
 
-  const { email, nationalID, otherNumber, phoneNumber, profile, username } =
+  let passwordErr;
+  if (form.password !== form.passwordRpt) {
+    passwordErr = (
+      <div className="passwordError">
+        <FaExclamationCircle size={16} />
+        no match!!
+      </div>
+    );
+  } else {
+    passwordErr = null;
+  }
+
+  const lsR = axios.create({
+    baseURL: "http://localhost:5003/",
+    headers: {
+      authorization: "Bearer " + state.user.accessToken,
+    },
+  });
+  const handleUpdatePassword = async(e) => {
+    e.preventDefault()
+    try{
+      await lsR.put(`/api/users/${state.user.id}`, form)
+      setAlert("Succss", "success")
+  }catch(error){
+    setAlert(error, 'error')
+  }
+  }
+  const { email, nationalID, otherNumber, phoneNumber, profile, username, id } =
     state.user;
+
+  const IL = "http://localhost:5003";
   return (
     <div className="settting">
       <div className="setting__nav">
@@ -39,7 +86,11 @@ function Settings() {
           </div>
           <div className="imgContainer">
             {profile ? (
-              <img src="" alt="" />
+              <img
+                src={IL + `/images/${profile}`}
+                alt=""
+                className="settingsTopImg"
+              />
             ) : (
               <div className="settingsProfile">
                 {username.charAt(0).toUpperCase()}
@@ -105,19 +156,80 @@ function Settings() {
         </div>
 
         <section className="section1">
-          {resourceType === "userInfo" && <UserInfo />}
+          {resourceType === "userInfo" && (
+            <UserInfo />
+          )}
           {resourceType === "analytics" && (
-            <div>Analytical information will be here</div>
+            <div><Analytics id={id}/></div>
           )}
           {resourceType === "properties" && (
-            <div> The user uploaded properties will be displayed here</div>
+            <div><SingleUserProperty id ={id}/></div>
           )}
           {resourceType === "notifications" && (
-            <div> Contact notifications will be displayed here!!</div>
+            <>
+            <div><Notification /></div>
+            <div><Notification /></div>
+            <div><Notification /></div>
+            </>
           )}
         </section>
       </div>
-      <div className="setting__bottom"></div>
+      {resourceType === "userInfo" && (
+      <div className="setting__bottom">
+        <div className="updatePasswordSection">
+          <div className="link">
+            <FaCube className="icon" /> Reset Password: <span>{username}</span>
+          </div>
+        </div>
+
+        {/* password group */}
+        <form className="passwordForm" onSubmit={handleUpdatePassword}>
+          <div className="passwordGroup">
+            <div className="formgroup">
+              <label htmlFor="password">
+                <FaEye />
+                Update Password*
+              </label>
+              <input
+                type="password"
+                name=""
+                id="password"
+                onChange={(e) => setField("password", e.target.value)}
+                placeholder="*******"
+              />
+            </div>
+
+            <div className="formgroup">
+              <label htmlFor="rpassword">
+                {" "}
+                <FaEye />
+                Repeat Password*
+              </label>
+              <input
+                type="password"
+                name=""
+                id="rpassword"
+                onChange={(e) => setField("passwordRpt", e.target.value)}
+                placeholder="*******"
+              />
+
+              <span>{passwordErr}</span>
+            </div>
+            
+            <div className="formgroup">
+            <div className="passwordGroupContainer">
+              <div className="buttonContainer">
+                <button type="submit">Reset Password</button>
+              </div>
+            </div>
+            </div>
+
+          </div>
+        </form>
+      </div>
+      )}
+
+      <Footer />
     </div>
   );
 }

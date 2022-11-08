@@ -82,6 +82,8 @@ function Nav() {
     }
   };
 
+
+  const IL = "http://localhost:5003"
   return (
     <div className="nav">
       <div className={color ? "top activeTop" : "top"}>
@@ -124,7 +126,7 @@ function Nav() {
                 onClick={() => setProfileMenu(!profileMenu)}
               >
                 {state.user.profile ? (
-                  <img src="" alt="" />
+                  <img src={IL + `/images/${state.user.profile}`} alt="" className="profileImg"/>
                 ) : (
                   <div
                     className="profileAnottation"

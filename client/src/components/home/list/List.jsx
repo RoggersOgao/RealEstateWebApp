@@ -99,7 +99,7 @@ function List() {
 
     // filter whatever the user searches either in lowercase or uppercase
 if(form.searchParams){
-    data = state.listingData.filter((item)=>item.propertyName.toLowerCase().includes(form.searchParams))
+    data = state.listingData.filter((item)=>item.propertyName.toLowerCase().includes(form.searchParams.toLowerCase()))
 }
 
 // filter Property type
@@ -329,8 +329,10 @@ const handleRange = (e) =>{
             {isLoading ? <Skeleton type="feed"/> :(
             <div className="list__right--card"> 
                 {currentItems.map((item,index)=>(
-                    
-                    <Card listing={item} key={index} handleHeartClick={handleHeartClick} />
+                    <div key={index}>
+
+                        <Card listing={item} handleHeartClick={handleHeartClick} />
+                    </div>
                     
                 ))}
             </div>

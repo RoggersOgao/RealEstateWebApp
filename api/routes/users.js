@@ -27,7 +27,7 @@ const verify = (req, res, next) => {
 }
 //UPDATE
 router.put("/:id", verify, async (req, res) => {
-  if (req.body.userId === req.params.id || req.user.isAdmin) {
+  if (req.user.id === req.params.id || req.user.isAdmin) {
     if (req.body.password) {
       const salt = await bcrypt.genSalt(10);
       req.body.password = await bcrypt.hash(req.body.password, salt);
@@ -51,7 +51,7 @@ router.put("/:id", verify, async (req, res) => {
 
 //DELETE
 router.delete("/:id", verify, async (req, res) => {
-  if (req.body.userId === req.params.id || req.user.isAdmin) {
+  if (req.user.id === req.params.id || req.user.isAdmin) {
     try {
       const user = await User.findById(req.params.id);
       try {
@@ -73,7 +73,8 @@ router.delete("/:id", verify, async (req, res) => {
 router.get("/:id", async (req, res) => {
   try {
     const user = await User.findById(req.params.id);
-    const { password, ...others } = user._doc;
+    // const { password, ...others } = user._doc;
+    const {...others } = user._doc;
     res.status(200).json(others);
   } catch (err) {
     res.status(500).json(err);

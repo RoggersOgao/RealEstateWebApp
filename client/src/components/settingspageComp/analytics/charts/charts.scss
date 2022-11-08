@@ -1,0 +1,23 @@
+@import "../../../../sass/main.scss";
+.recharts-sector{
+    fill:rgb(1, 94, 193);
+
+}
+
+text{
+    color:white;
+    font-size:1.5rem;
+
+    position: absolute;
+    top:50%;
+}
+
+.text{
+    fill:white;
+    text-align: center;
+}
+
+.rscontainer{
+    margin:2rem 0;
+    margin-bottom: 10rem;
+}

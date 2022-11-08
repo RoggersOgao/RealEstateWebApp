@@ -1,0 +1,214 @@
+@import "../../../sass/main.scss";
+
+.userInfo{
+position:relative;
+@include respond(tab-port){
+    margin-bottom: 36rem;
+}
+    &__container{
+
+        // background-image:url(../../../../public/images/registerPage-01.png);
+        width:100%;
+        height: 85vh;
+        // background-size:cover;
+        // background-position: bottom right;
+        
+        // @include respond(tab-port){
+        //     display: flex;
+        //     justify-content: center;
+        // }
+
+display: flex;
+align-items: center;
+
+@include respond(tab-port){
+    flex-direction: column;
+}
+
+        .left{
+            margin-top: 4rem;
+            flex:1;
+            width:100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            &__image{
+                width:30rem;
+                height: 30rem;
+                border-radius: 50%;
+                border: .3px solid $borderGrey;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            }
+            .formgroup{
+            
+                input{
+                    display:none;
+                }
+                .labelsgroup{
+                    display: flex;
+                    align-items: center;
+                    gap:1rem;
+                    .uploadIcon{
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        gap:1rem;
+                        color:rgb(255, 149, 0);
+                        padding:1rem 0;
+                        .icon{
+                                font-size: 3rem;
+                        }
+                        font-size:2rem;
+                        margin-top: 3rem;
+                    }
+                }
+            
+            }
+            .formImage{
+                width:100%;
+                height: 100%;
+                object-fit: cover;
+                overflow: hidden;
+                border-radius: 50%;
+            }
+            .settingsProfile{
+                font-size:20rem;
+                color:white;
+            }
+            
+                     }
+                     .right{ 
+                        flex:1;
+
+                        input{
+                            color:green !important;
+                            margin: .5rem 0 1.5rem 0;
+                        }
+        .userInfoForm{
+
+height: 100%;
+
+@include respond(tab-port){
+    flex-direction: column;
+}
+
+            label{
+                font-size:1.4rem;
+                display: flex;
+                align-items: center;
+                gap:1rem;
+                font-weight: bold;
+                color:white;
+                padding:1.5rem 0;
+            }
+            input{
+                width:24rem;
+                font-size: 1.4rem;
+                color:$lightGrey;
+                padding:1rem;
+                background-color: $altBodyColor;
+                border:.3px solid $borderGrey;
+
+                &:active,&:focus{
+                    outline:none;
+                }
+
+                &:defined{
+                    background-color: $altBodyColor;
+                    color:white;
+                }
+
+                &::placeholder{
+                    color:grey;
+                }
+            }
+
+            .nameGroup{
+                display: flex;
+                gap:1rem;
+                
+            }
+
+            .formgroupEmail{
+                width:49rem;
+
+                input{
+                    width:100%;
+                }
+            }
+
+            .formgroupNationalId{
+                width:49rem;
+                input{
+                    width:100%;
+                }
+            }
+
+            .phoneNumberGroup{
+
+                display: flex;
+                gap:1rem;
+            }
+
+            .passwordGroup{
+                display: flex;
+                gap:1rem;
+            }
+
+            .formgroupbtn{
+
+                .btnContainer{
+                    display: flex;
+                    margin: 2rem 0;
+                    .btn{
+                        button{
+                            width:19rem;
+                            height: 4rem;
+                            border:none;
+                            background-color:$primaryColor;
+                            border-radius: 30rem;
+                            color:White;
+                            font-size:1.4rem;
+                            font-weight: bold;
+                            display: flex;
+                            align-items: center;
+                            gap:1rem;
+                            justify-content: center;
+                            transition:all .3s ease-in-out;
+                            &:hover{
+                                background-color:$grey;
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            .text{
+                font-size:1.3rem;
+                text-align: center;
+
+                .link{
+                    text-decoration: none;
+                    color:$primaryColor;
+                }
+            }
+         }
+        }
+    }
+}
+
+
+.passwordError{
+
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    font-size:1.4rem;
+    margin-top: 1rem;
+    color:rgb(197, 28, 28);
+}
+

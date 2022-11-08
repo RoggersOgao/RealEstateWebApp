@@ -146,14 +146,14 @@ function Register() {
 
                 <div className="formgroup">
                     <label htmlFor="password"><FaEye /> Password*</label>
-                    <input type="password" name="" id="password" required onChange={(e)=> setField("password", e.target.value)} placeholder="*******"/>
+                    <input type="password" name="" id="password" onChange={(e)=> setField("password", e.target.value)} placeholder="*******"/>
                 </div>
 
                 {/* repeat password */}
 
                 <div className="formgroup">
                     <label htmlFor="rpassword"> <FaEye />Repeat Password*</label>
-                    <input type="password" name="" id="rpassword" required  onChange={(e)=> setField("passwordRpt", e.target.value)} placeholder="*******"/>
+                    <input type="password" name="" id="rpassword"   onChange={(e)=> setField("passwordRpt", e.target.value)} placeholder="*******"/>
 
                     <span>{passwordErr}</span>
                 </div>

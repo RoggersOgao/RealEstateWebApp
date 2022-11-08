@@ -1,0 +1,36 @@
+@import "../../../../sass/main.scss";
+.card{
+    position: relative;
+}
+.propertyActions{
+display: flex;
+flex-direction: column;
+position: absolute;
+left:0;
+z-index: 3;
+top:0;
+    &__top{
+font-size:2rem;
+padding:1rem;
+color:white;
+cursor: pointer;
+background-color: $primaryColor;
+transition: box-shadow .4s ease-in-out;
+&:hover{
+    box-shadow: 0 3px 10px -2px black;
+    z-index: 2;
+}
+    }
+    &__bottom{
+        font-size:2rem;
+        padding:1rem;
+        background-color: rgb(255, 0, 0);
+        color:white;
+        cursor: pointer;
+        transition: box-shadow .4s ease-in-out;
+        &:hover{
+            box-shadow: 2px 2px 15px -2px black;
+        }
+        
+    }
+}

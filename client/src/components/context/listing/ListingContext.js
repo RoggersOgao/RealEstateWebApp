@@ -7,7 +7,8 @@ export const ListingRepository = ({children}) => {
 const initialState = {
     listingData:[],
     singleProperty:JSON.parse(localStorage.getItem("singlePage")) || {},
-    likedData:JSON.parse(localStorage.getItem("cart")) || []
+    likedData:JSON.parse(localStorage.getItem("cart")) || [],
+    userProperties: []
 }
 const [state, dispatch] = useReducer(ListingReducer, initialState)
 

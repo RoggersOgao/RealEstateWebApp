@@ -70,7 +70,7 @@ function AddListing() {
           },
         });
 
-        if(!form.propertyName || !form.location || !form.propertyType || !form.address || !form.bedrooms || !form.bathrooms){
+        if(!form.propertyName || !form.location || !form.propertyType || !form.address || !form.bedrooms || !form.bathrooms || !form.propertyType || !form.propertySize){
           setAlert("All fields are required!!", "error")
         }else{
           const response = await lsR.post(
@@ -111,6 +111,8 @@ function AddListing() {
       } catch (error) {
         setAlert(error, 'error')
       }
+    }else{
+      setAlert("Images required to continue!!", 'error')
     }
   };
 

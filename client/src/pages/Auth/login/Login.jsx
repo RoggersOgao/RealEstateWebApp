@@ -39,6 +39,7 @@ function Login() {
          }catch(err){
              setAlert(err.response.data.error, 'error')
              // console.log()
+             setIsLoading(false)
          }
     }
 
