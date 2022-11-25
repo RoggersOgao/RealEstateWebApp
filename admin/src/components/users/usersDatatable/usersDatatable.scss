@@ -1,0 +1,148 @@
+@import "../../../sass/main.scss";
+.css-1jbbcbn-MuiDataGrid-columnHeaderTitle{
+    font-size:1.5rem;
+    font-weight: 600;
+    color:white;
+}
+.MuiDataGrid-cellContent {
+    font-size:1.5rem;
+}
+.MuiDataGrid-footerContainer{
+    border-top:none !important;
+}
+
+.datagridDark{
+    font-size:1.4rem;
+    color:white;
+    border:none !important;
+    margin-top: 4rem;
+}
+.MuiTablePagination-displayedRows{
+    font-size:1.5rem !important;
+    color:white;
+}
+.MuiSvgIcon-root{
+    font-size:2.3rem !important;
+    color:rgb(129, 129, 129);
+
+    &:hover{
+        border-radius: 50%;
+        background-color: $borderGrey !important;
+    }
+}
+.MuiMenuItem-root{
+    font-size:1.3rem !important;
+    color:white !important;
+}
+.MuiNativeSelect-select{
+    color:white !important;
+    font-size:1.4rem !important;
+    border-bottom: 1px solid white !important;
+
+
+    &:hover{
+        border-bottom: 1px solid white !important;
+    }
+}
+.MuiFormLabel-root{
+    font-size:1.4rem !important;
+    color:white !important;
+}
+.MuiInputBase-input{
+    color:white !important;
+    font-size:1.3rem !important;
+    border-bottom: 1px solid white !important;
+
+    &:hover{
+        border-bottom: 1px solid white !important;
+    }
+}
+select{
+    color:white !important;
+}
+
+.MuiPaper-root{
+    background-color: $altBodyColor !important;
+}
+.MuiDataGrid-columnHeaders{
+    border:.3px solid $borderGrey !important;
+    position: relative;
+}
+.MuiDataGrid-cell{
+    color:rgb(209, 209, 209);
+    font-size:1.4rem;
+    border:none;
+    border-bottom:.3px solid $borderGrey !important;
+}
+
+.datatable{
+    .cellwithimg{
+        display: flex;
+        align-items: center;
+        gap:1rem;
+        font-size:1.2rem;
+        .cellimg{
+            width:3.2rem;
+            height: 3.2rem;
+            border-radius: 50%;
+        }
+    }
+
+    .active{
+        color:green;
+        font-size:1.2rem;
+    }
+    .passive{
+        font-size: 1.2rem;
+        color:orange;
+    }
+}
+
+
+.container{
+    
+}
+
+.actionsContainer{
+    display: flex;
+    gap:1.5rem;
+    align-items: center;
+    
+    &__view{
+        color:orange;
+        cursor: pointer;
+    }
+    &__delete{
+        color:rgb(239, 22, 22);
+        cursor: pointer;
+    }
+
+}
+.itemsCont{
+    background-color: $altBodyColor;
+    // padding:1rem;
+    width:10%;
+    position: absolute;
+    // top:4rem;
+
+    .item{
+        display: flex;
+        align-items: center;
+        gap:1rem;
+        padding:.3rem;
+        justify-content: center;
+        margin-bottom: 1rem;
+
+        &:hover{
+            background-color: #2d2c25;
+            cursor: pointer;
+        }
+    }
+    .item--1{
+        display: flex;
+        align-items: center;
+        gap:1rem;
+        justify-content: center;
+        color:red;
+    }
+}

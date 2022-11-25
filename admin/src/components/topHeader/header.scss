@@ -1,0 +1,204 @@
+@import "../../sass/main.scss";
+
+.header{
+display: flex;
+justify-content: space-between;
+padding:1rem 3.5rem;
+height: 5rem;
+border-bottom: .3px solid $borderGrey;
+align-items: center;
+    .left{
+        display: flex;
+        width:43%;
+        align-items: center;
+        justify-content: space-between;
+.img{
+    flex:1;
+    display: flex;
+    align-items: center;
+    img{
+        width:5rem;
+        background-size: cover;
+    }
+}
+
+.search{
+display: flex;
+flex:4;
+width:100%;
+align-items: center;
+
+@include respond(tab-port){
+    display: none;
+}
+    .icon{
+        transform: translateX(-3rem);
+        font-size:1.8rem;
+        color:white;
+    }
+    .area{
+       
+        input{
+            background-color: $altBodyColor;
+            border: .3px solid rgba(0, 233, 0, 0.567);
+            padding:.7rem 2rem;
+            border-radius: 4rem;
+            color:white;
+
+            &:focus{
+                outline:none;
+
+            }
+        }
+    }
+}
+    }
+    .right{
+        
+        display: flex;
+        align-items: center;
+        gap:4rem;
+
+        .language{
+            font-size:1.5rem;
+            color:white;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap:1rem;
+
+            .icon{
+                font-size:3.4rem;
+            }
+        }
+        .profile{
+            display: flex;
+            align-items: center;
+            gap:2rem;
+            &__name{
+                font-size:1.6rem;
+                font-weight: 800;
+                color:white;
+
+                @include respond(phone){
+                    display:none;
+                }
+            }
+            .profileAnottation{
+                width:100%;
+                height: 100%;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size:3rem;
+                color:white;
+                font-weight: bold;
+            }
+            .profileImg{
+                width:4rem;
+                height: 4rem;
+                object-fit: cover;
+                object-position: center;
+    
+            }
+            .profileContainer{
+                width:4rem;
+                height:4rem;
+                border-radius:50%;
+                // border:.3px solid rgba(255, 255, 255, 0.439);
+                overflow:hidden;
+                cursor:pointer;
+                .profile{
+                    width:4rem;
+                    object-fit:cover;
+                    height:4rem;
+                }
+    
+            }
+            .profileContainerItems{
+                position:absolute;
+                z-index:6;
+                top:5rem;
+                right:5rem;
+                width:14rem;
+                border-radius:6px;
+                background-color:$altBodyColor;
+                box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.281);
+                border:.3px solid $borderGrey;
+    
+                .itemsContainer{
+                    display:flex;
+                    flex-direction:column;
+                    list-style-type: none;
+                    
+                    .logo{
+                        display: flex;
+                        justify-content: center;
+                        padding:.7rem 0;
+                        img{
+                            filter:opacity(.8);
+                            width:6rem;
+                            background-size:cover;
+                        }
+                    }
+                    .listUser{
+                        margin-top: 1rem;
+                        font-size:1.3rem;
+                        padding:1rem 0;
+                        width:100%;
+                        display:flex;
+                        justify-content: center;
+                        border-bottom:.3px solid $borderGrey;
+                        border-top:.3px solid $borderGrey;
+                        
+                        
+                        
+    
+                        .cont{
+                            display:flex;
+                            gap:1rem;
+                            align-items:center;
+                            color:$lightGrey;
+                        }
+                    }
+                    .list{
+                        
+                        font-size:1.4rem;
+                        padding:1rem;
+                        width:100%;
+                        cursor:pointer;
+                        &:hover{
+                            background-color:rgb(61, 61, 61);
+                        }
+                        &__signout{
+                            display:flex;
+                            gap:1rem;
+                            align-items: center;
+                            color:white;
+                            .signoutIcon{
+                                transform: rotate(180deg);
+                                height:1.4rem;
+                                color:white;
+                                background-size: cover;
+    
+                            }
+    
+                        }
+                        .link{
+                        font-size:1.4rem;
+                        text-decoration:none;
+                        color:white;
+                        display: flex;
+                        gap:1rem;
+                        align-items: center;
+                        
+                        }
+    
+                    }
+                }
+            }
+        }
+        
+    }
+}

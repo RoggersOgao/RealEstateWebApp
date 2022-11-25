@@ -1,0 +1,63 @@
+@import "../../sass/main.scss";
+
+.properties{
+
+    &__nav{
+        position: sticky;
+        top:0;
+        z-index: 3;
+        background-color: $bodyColor;
+    }
+
+    &__main{
+        display: flex;
+
+        .left{
+            
+        }
+        .right{
+            
+            width: 80%;
+            margin: 0 auto;
+
+            &__header {
+                margin-top: 10rem;
+
+                .top {
+                    border: .3px solid $borderGrey;
+                    border-radius: 1rem 1rem 0 0;
+                    padding: 1rem;
+                    border-top: 2px solid rgb(0, 171, 0);
+                    font-size:1.5rem;
+                    font-weight: 700;
+                    color:rgb(255, 255, 255);
+                    display: flex;
+                    align-items: center;
+                    gap:1rem;
+                    .icon{
+                        font-size:2rem;
+                    }
+
+                }
+
+                .bottom {
+                    background-color: $altBodyColor;
+                    height: 5rem;
+                    display: flex;
+                    align-items: flex-end;
+
+                    &__link{
+                        border-bottom: 2px solid rgb(0, 171, 0);
+                        padding:0 1rem;
+                        font-size:1.5rem;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        color:white;
+                    }
+                }
+                    
+            }
+        }
+    }
+
+}

@@ -1,11 +1,14 @@
-import React,{useState, useRef, useEffect} from "react";
+import React,{useState, useRef, useEffect, useContext} from "react";
 import { FaBuilding, FaCalendar, FaEnvelope, FaKey, FaMoneyBill, FaPaperclip, FaPaperPlane, FaPhoneAlt, FaStar, FaTimes, FaTrophy, FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./singlePageHeader.scss";
+import axios from 'axios'
+import LoginContext from "../../context/auth/loginContext/LoginContext";
 function SinglePageHeader({
   propertyName,
   propertyType,
   propertyState,
+  userId,
   location,
   createdAt,
   bedrooms,
@@ -13,11 +16,14 @@ function SinglePageHeader({
   description,
   features,
   img,
+  _id,
   rating,
   price,
   username,
 })
  {
+
+    const {state} = useContext(LoginContext) 
 
     const created = new Date(createdAt).toDateString()
 
@@ -65,7 +71,39 @@ const setField = (field,value)=>{
   })
 }
 
-console.log(form)
+
+// form to handleSubmit
+
+const ms = axios.create({
+  baseURL:"http://localhost:5003/api/",
+  headers:{
+    authorization: "Bearer "+state.user.accessToken
+  }
+})
+const handleSubmit = async(e) => {
+    e.preventDefault()
+
+    const newForm = {
+      "username":form.username,
+      "email":form.email,
+      "userId":userId,
+      "propertyId":_id,
+      "phoneNumber":state.user.phoneNumber,
+      "otherNumber":state.user.otherNumber,
+      "profile":state.user.profile,
+      "message":form.message
+    }
+
+    try{
+      const response = await ms.post("http://localhost:5003/api/messages", newForm)
+      setForm([])
+      console.log("success")
+    }catch(err){
+      
+    }
+
+}
+
   return (
     <div className="sPageHeader">
       <div className="sPageHeader__title">
@@ -150,13 +188,13 @@ console.log(form)
       <div className="sPageHeader__modal">
 
         <div className="formContainer" ref={contactRef}>
-      <form action="" className="form" >
+      <form action="" className="form" onSubmit={handleSubmit}>
         <div className="close" onClick={()=>setOpenModal(false)}>
           <FaTimes />
         </div>
         <div className="formgroup">
           <label htmlFor=""><FaUser />Name</label>
-          <input type="text" name="" id="" value={form.name || ""} onChange={(e)=>setField("name", e.target.value)}/>
+          <input type="text" name="" id="" value={form.username || ""} onChange={(e)=>setField("username", e.target.value)}/>
         </div>
         <div className="formgroup">
           <label htmlFor=""><FaEnvelope /> Email</label>
@@ -164,7 +202,7 @@ console.log(form)
         </div>
         <div className="formgroup">
           <label htmlFor=""><FaPaperclip />Description</label>
-          <textarea name="" id="" cols="30" rows="10" value={form.msg || ""} onChange={(e)=>setField("msg", e.target.value)}></textarea>
+          <textarea name="" id="" cols="30" rows="10" value={form.message || ""} onChange={(e)=>setField("message", e.target.value)}></textarea>
         </div>
 
         <div className="formgroup">

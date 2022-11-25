@@ -1,0 +1,44 @@
+@import "../../../sass/main.scss";
+
+.cellwithimg{
+    width:100%;
+    .right{
+        .bottom{
+            display: flex;
+            align-items: center;
+            width:100%;
+            gap:2rem;
+            .left{
+                display: flex;
+                align-items: center;
+                gap:.3rem;
+            }
+            .middle{
+                display: flex;
+                align-items: center;
+                gap:.3rem;
+            }
+            .right{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap:.3rem;
+                
+                .icon{
+                    font-size:1.8rem;
+                }
+            }
+        }
+    }
+}
+
+.propertyStateCont{
+    .top{
+        font-weight: bold;
+        color:white;
+    }
+    .bottom{
+        font-size:1.3rem;
+        color:grey;
+    }
+}

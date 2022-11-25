@@ -1,0 +1,326 @@
+@import "../../../../sass/main.scss";
+
+.messagePage {
+
+    &__nav {
+        position: sticky;
+        top: 0;
+        z-index:7;
+        &--top {
+        }
+    }
+
+    &__Container {
+
+        &--topHeader {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            border-bottom: .3px solid $borderGrey;
+
+            .section1 {
+                flex:1;
+                width:30%;
+                border-right: .3px solid $borderGrey;
+                padding: 2.4rem 1rem;
+
+                &__id {
+                    display:-webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    max-width:25%;
+                    font-size: 1.2rem;
+                    color: grey;
+                    font-weight: bold;
+                }
+
+                &__phone {
+                    font-size: 2rem;
+                    color: white;
+                    font-weight: bold;
+                    height: 100%;
+
+                    @include respond(phone){
+                        font-size:1.4rem;
+                    }
+                }
+
+            }
+
+            .section2 {
+                flex:1;
+                display: flex;
+                align-items: center;
+                padding:0 2rem;
+                justify-content: space-between;
+                &__sentOn {
+                    flex:1;
+                    border-right:.3px solid $borderGrey;
+                    height: 100%;
+                    padding:2.4rem 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    .text {
+                        font-size:1.2rem;
+                        color:grey;
+                        font-weight: bold;
+                        display: flex;
+                        align-items: center;
+                        gap:1rem;
+                        text-transform: uppercase;
+                        white-space: nowrap;
+                    }
+
+                    .date {
+                        white-space: nowrap;
+                        color:white;
+                        font-size:1.6rem;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        
+
+                        @include respond(phone){
+                            font-size:1.3rem;
+                        }
+                    }
+                }
+
+                &__actionIcons {
+                    flex:1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    gap:2rem;
+                    padding:0 2rem;
+                    .iconCont {
+                        display: flex;
+                        align-items: center;
+                        font-size:1.5rem;
+                        cursor: pointer;
+                        .icon{
+                            font-size:2rem;
+                        }
+                        position: relative;
+
+                        .text{
+                            position:absolute;
+                            top:3rem;
+                            right:1rem;
+                            background-color: $borderGrey;
+                            padding:.6rem 1.1rem;
+                            border-radius: .6rem;
+                            transition: .7s ease-in-out;
+                        }
+                        .link{
+                            display: flex;
+                            gap:.5rem;
+                            color:white; 
+                            font-weight: bold;
+                        align-items: center;
+                        text-decoration: none;
+                        transition: all .3s ease-in-out;
+
+                        &:hover{
+                            color:$primaryColor;
+                        }
+                        }
+                    }
+
+                    .text {
+                        display: flex;
+                        font-size:1.5rem;
+                        
+                        
+                    }
+                }
+            }
+
+        }
+        // end of the topheader section
+
+
+        // 
+
+        &--body{
+            width:80%;
+            margin: 0 auto;
+            .topPart{
+                margin-top: 3rem;
+                display: flex;
+                align-items: center;
+                gap:2rem;
+                &__left{
+                    img{
+                        width:9rem;
+                        height: 9rem;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        object-position: center ;
+                    }
+                }
+                &__right{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap:1rem;
+                    &--name{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+
+                        .text{
+                            font-size:1.2rem;
+                            text-transform: capitalize;
+                        }
+                        .name{
+                            font-size:2rem;
+                            color:white;
+                            text-transform: capitalize;
+                            font-weight: bold;
+                            letter-spacing: 1px;
+                        }
+                    }
+                    .date{
+                        font-size:1.4rem;
+                        text-transform: capitalize;
+
+                    }
+                }
+            }
+
+            .headerContent{
+                margin-top: 5rem;
+                border: .3px solid $borderGrey;
+                border-top:2px solid rgb(0, 169, 0);
+                border-radius: 12px 12px 0 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 4.5rem;
+                padding:0 2rem;
+
+                .left{
+font-size:1.2rem;
+display: flex;
+align-items: center;
+gap:1rem;
+span{
+    display: flex;
+    align-items: center;
+    color:white;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+                }
+                .right{
+display: flex;
+align-items: center;
+// gap:2rem;
+// font-size:1.7rem;
+
+.icon{
+    width:4rem;
+    height:4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:1.6rem;
+    color:white;
+    &:hover{
+        background-color: #7070701e;
+        cursor:pointer;
+    }
+}
+
+                }
+            }
+
+            .bodyContentMessages{
+                &__title{
+                    padding:2rem 0;
+                    font-size:1.4rem;
+                    color:white;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+                &__body{
+                    border:.3px dashed rgba(128, 128, 128, 0.204);
+                    padding:2rem;
+                    border-radius: .5rem;
+                    position:relative;
+                    font-size:1.5rem;
+                    color:grey;
+
+                    .text{
+                        position:absolute;
+                        top:50%;
+                        left:50%;
+                        transform: translate(-50%, -50%);
+                        font-size:4rem;
+                        overflow: hidden;
+                        color:rgba(255, 255, 255, 0.048);
+                    }
+                }
+            }
+
+        .bodyContentMessagesPropertyDescription{
+            width:100%;
+margin-top: 3rem;
+            &__header{
+                margin-top: 5rem;
+                border: .3px solid $borderGrey;
+                border-top:2px solid rgb(0, 169, 0);
+                border-radius: 12px 12px 0 0;
+                display: flex;
+                align-items: center;
+                height: 4.5rem;
+                padding:0 2rem;
+                justify-content: space-between;
+
+                .text{
+                    font-size:1.5rem;
+                    display: flex;
+                    align-items: center;
+                    gap:1rem;
+                    color:white;
+                    font-weight: bold;
+                    .box{
+                        font-size: 2rem;
+                        color:grey;
+                    }
+                    .icon{
+                        font-size:1.6rem;
+                        color:white;
+                    }
+                    span{
+                        font-size:1.2rem;
+                        color:grey;
+                        font-weight: 400;
+                    }
+
+                }
+.viewIcon{
+    font-size:1.4rem;
+    display: flex;
+    align-items: center;
+    gap:.5rem;
+    color:white;
+    cursor: pointer;
+}
+
+                
+            }
+
+            &__container{
+                margin-top: 6rem;
+            }
+        }
+        
+        }
+    }
+}

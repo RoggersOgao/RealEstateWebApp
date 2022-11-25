@@ -8,7 +8,9 @@ function Photos() {
 
     let Arr = []
     state.listingData.map((item,index)=>(
-        Arr.push(item.propertyType)  
+        <div key={index}>
+            {Arr.push(item.propertyType)}
+        </div>
     ))
     
     

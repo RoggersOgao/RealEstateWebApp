@@ -1,0 +1,95 @@
+@import "../../../../sass/main.scss";
+
+.messages{
+    padding:.4rem;
+    border-top:.3px solid rgba(128, 128, 128, 0.107);
+    &:hover{
+        background-color: $altBodyColor;
+        box-shadow: 2px 4px 12px -3px rgba(0, 0, 0, 0.505);
+        cursor: pointer;
+    }
+    &__cont{
+display: flex;
+align-items: center;
+gap:4rem;
+justify-content: space-between;
+
+        .left{
+            display: flex;
+            align-items: center;
+            font-size:1.4rem;
+            gap:2rem;
+            color:white;
+
+            .icons{
+                display: flex;
+                align-items: center;
+                gap:1rem;
+
+                &--icon{
+                    color:grey;
+                    font-size:1.5rem;
+                }
+                &--icon1{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size:1.5rem;
+                    width:4rem;
+                    height: 4rem;
+                    border-radius: 50%;
+    
+                    &:hover{
+                        background-color: $borderGrey;
+                    }
+                }
+            }
+            .username{
+                font-weight: bold;
+            }
+
+        }
+        .middle{
+            display: flex;
+            align-items: center;
+            font-size:1.4rem;
+            position: absolute;
+            left:50%;
+            transform: translateX(-50%);
+            display:-webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            max-width:30%;
+        }
+        .right{
+            display: flex;
+            align-items:center;
+
+            font-size: 1.5rem;
+            color:white;
+            font-weight: bold;
+            position: relative;
+            .iconsContainer{
+                display: flex;
+                align-items: center;
+                
+                position: absolute;
+                right:0;
+                .icon{
+                    width:4rem;
+                    height: 4rem;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &:hover{
+                        background-color: $borderGrey;
+                    }
+                }
+            }
+
+        }
+    }
+}

@@ -12,6 +12,7 @@ import Register from './pages/Auth/register/Register';
 import Settings from "./pages/settings/Settings";
 import LoginContext from "./components/context/auth/loginContext/LoginContext";
 import SinglePage from "./pages/singleListing/SinglePage";
+import MessagePage from "./components/settingspageComp/notification/messagePage/MessagePage";
 function App() {
 
   const {state} = useContext(LoginContext)
@@ -30,6 +31,7 @@ if(state.user === null){
       <Route path="/listing" element={user ? <AddListing /> : <Login />} />
       <Route path="/listing/:propertyId" element={user ? <SinglePage /> : <Login />} />
       <Route path="/about" element={user ? <About /> : <Login />} />
+      <Route path="/messages/vm/:msgId" element={user ? <MessagePage /> : <Login />} />
       <Route path="/contact" element={user ? <Contact /> : <Login />} />
       <Route path="/terms" element={user ?<Terms /> : <Login />} />
       <Route path="/privacy" element={user ? <Privacy /> : <Login />} />

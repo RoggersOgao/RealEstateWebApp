@@ -1,0 +1,76 @@
+@import "../../../sass/main.scss";
+
+.skeletonCard{
+    width:15rem;
+    height: 5rem;
+    background-color: $borderGrey;
+    animation:Skeletonblink 2s ease-in-out infinite alternate;
+}
+.statCard{
+    display: flex;
+    border:.3px solid rgba(255, 255, 255, 0.057);
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem 2rem;
+    height: 100%;
+    box-shadow: 0 4px 12px -4px rgba(0, 0, 0, 0.757);
+    &__left{
+        
+        .top{
+            font-size:1.2rem;
+            color:rgb(163, 163, 163);
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .bottom{
+            font-size:4rem;
+            font-weight: bold;
+            color:white;
+        }
+
+    }
+    &__right{
+img{
+    height: 5rem;
+    background-size:cover;
+    filter:opacity(.4)
+}
+    }
+}
+
+.hom{
+    border: .3px solid rgba(0, 255, 0, 0.25);
+    .top{
+        color:rgb(2, 178, 2);
+    }
+}
+.cond{
+    border: .3px solid rgba(255, 14, 74, 0.25);
+    .top{
+        color:rgb(255, 14, 74);
+    }
+}
+.apt{
+    border: .3px solid rgba(255, 230, 0, 0.25);
+    .top{
+        color:rgb(255, 230, 0);
+    }
+}
+.off{
+    border: .3px solid rgba(0, 157, 255, 0.25);
+    .top{
+        color:rgb(0, 157, 255);
+    }
+}
+
+@keyframes Skeletonblink {
+    
+    0%{
+        opacity:.5;
+        transform: scale(1);
+    }
+    100%{
+        opacity:1;
+        transform: scale(1.0001);
+    }
+}

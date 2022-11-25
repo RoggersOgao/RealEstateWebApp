@@ -10,7 +10,9 @@ function Chart({id}) {
   const listing = state.userProperties
   let Arr = []
   listing.map((item,index)=>(
-      Arr.push(item.propertyType)  
+    <div key={index}>
+      {Arr.push(item.propertyType)}
+    </div>
   ))
   
   const data = [

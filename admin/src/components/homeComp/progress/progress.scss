@@ -1,0 +1,90 @@
+@import "../../../sass/main.scss";
+.progressContainer{
+    width:30rem;
+    margin:1rem;
+    padding:2rem;
+    @include respond(tab-port){
+        width:33rem;
+    }
+
+    box-shadow: -1px 8px 12px -5px black;
+    border:.1px solid $borderGrey;
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &--title{
+            font-size:1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding:0 1rem;
+            color:white;
+        }
+        &--icon{
+            cursor:pointer;
+        }
+    }
+    &__bottom{
+        padding:1rem;
+        // width:95%;
+        margin:0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &--chart{
+            width: 17rem;
+            height: 17rem;
+            display: flex;
+            justify-content: center;
+            width:100%;
+            margin: 3rem 0;
+            font-weight: bold;
+        }
+        &--title{
+            
+            border-top: .3px solid $borderGrey;
+            padding:1rem 0;
+            display: flex;
+            align-items: flex-start;
+            margin-top: 1.4rem;
+            color:white;
+            font-weight: bold;
+            color:rgb(255, 255, 255);
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+        &--amount{
+            width: 17rem;
+            height: 17rem;
+            display: flex;
+            justify-content: center;
+            width:100%;
+            margin: 3rem 0;
+            font-weight: bold;
+            .usersAmountLoading{
+
+                .dot{
+                    width:1rem;
+                    height: 1rem;
+                    background-color: rgb(255, 255, 255);
+                    animation:moveLeft 2s ease-in-out infinite alternate;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}
+
+
+@keyframes moveLeft {
+    0%{
+        transform: translateX(2rem);
+    }
+    50%{
+        transform: translateX(-2rem);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}

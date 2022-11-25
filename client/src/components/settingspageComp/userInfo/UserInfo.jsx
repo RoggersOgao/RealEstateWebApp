@@ -90,7 +90,6 @@ function UserInfo() {
               phoneNumber: form.phoneNumber,
               otherNumber: form.otherNumber,
               profile: profileFile,
-              isAdmin: false,
             };
             try{
                 const response = await lsR.put(`/api/users/${state.user.id}`, newData)
@@ -106,7 +105,6 @@ function UserInfo() {
               phoneNumber: form.phoneNumber,
               otherNumber: form.otherNumber,
               profile: "",
-              isAdmin: false,
             };
 
             try{

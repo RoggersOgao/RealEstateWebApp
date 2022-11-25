@@ -35,12 +35,13 @@ myProperty()
     const indexOfLastItem = currentPage*itemsPerPage
     const indexOfFirstItem = indexOfLastItem - itemsPerPage
     const currentItems = listing.slice(indexOfFirstItem, indexOfLastItem)
+
   return (
     <>
       {listing.map((item, index)=>(   
           <div className="userProperties" key={index}>
         {isLoading ? "loading...." :
-        <Card listing={item}/>
+        <Card listing={item} />
         }
     </div>
 

@@ -99,7 +99,7 @@ router.delete("/:id", verify, async (req, res) => {
     const listing = await Listing.findById(req.params.id);
     if (listing.id === req.body.id || req.user.isAdmin) {
       try {
-        await Listing.delete();
+        await listing.delete();
         res.status(200).json("Property has been deleted...");
       } catch (err) {
         res.status(403).json({ error: err.message });

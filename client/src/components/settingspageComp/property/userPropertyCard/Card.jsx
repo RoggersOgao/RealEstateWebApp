@@ -2,8 +2,13 @@ import React, { useState, useEffect, useRef } from "react";
 import { FaEdit, FaTimesCircle, FaTrash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./card.scss";
+import ListingContext from "../../../context/listing/ListingContext";
+import { useContext } from "react";
 
-function Card({ listing }) {
+function Card({ listing,handleEdit }) {
+
+
+  const {handleDelete} = useContext(ListingContext)
   // handlemodal image popup
   const modalRef = useRef();
   const cardRef = useRef();
@@ -59,8 +64,8 @@ function Card({ listing }) {
 
 {cardActions && (
   <div className="propertyActions">
-    <div className="propertyActions__top"><FaEdit /></div>
-    <div className="propertyActions__bottom"><FaTrash /></div>
+    <div className="propertyActions__top" onClick={()=>handleEdit(listing)}><FaEdit /></div>
+    <div className="propertyActions__bottom" onClick={()=>handleDelete(listing._id)}><FaTrash /></div>
   </div>
 ) }
 

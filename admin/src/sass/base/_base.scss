@@ -1,0 +1,26 @@
+$lightGrey: #c7c5c5;
+$grey: #707070;
+$borderGrey: #7070702f;
+$darkGrey: #747474;
+$bodyColor: #151412;
+$altBodyColor: #191814;
+$primaryColor: #ff9900;
+$skelColor:rgb(31, 31, 31);
+$shadow:rgba(128, 128, 128, 0.275);
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 8.5px;
+}
+body {
+  box-sizing: border-box;
+  background-color: $bodyColor;
+  color: $grey;
+  font-family: 'Poppins', sans-serif;
+}

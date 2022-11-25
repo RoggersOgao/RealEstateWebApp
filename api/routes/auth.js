@@ -154,6 +154,56 @@ const verify = (req, res, next) => {
 }
 
 
+//Admin Login
+router.post("/admin/login", async (req, res) => {
+
+  
+    try {
+  
+      if(!req.body.email || !req.body.password){
+        throw Error("All fields must be filled!!")
+      }
+  
+      const user = await User.findOne({email: req.body.email, isAdmin: true});
+  
+      //throwing an error if the email is wrong
+  
+      if(!user){
+        throw Error("Invalid username or password!!")
+      }
+      const validated = await bcrypt.compare(req.body.password, user.password);
+  
+      // throwing an error if the password is wrong
+      if(!validated){
+        throw Error("Invalid username or password!!")
+        // !validated && res.status(403).json("Wrong Username or Password!");
+      }
+  
+      // const { password, ...others } = user._doc; 
+  
+      if(user){
+        
+        const accessToken = generateAccessToken(user)
+        const refreshToken = generateRefreshToken(user) 
+        refreshTokens.push(refreshToken)
+        res.json({
+            id:user.id,
+            username: user.username,
+            email:user.email,
+            nationalID:user.nationalID,
+            phoneNumber:user.phoneNumber,
+            otherNumber:user.otherNumber,
+            profile:user.profile,
+            accessToken,
+            refreshToken
+        })
+      }
+      // res.status(200).json(others);
+    } catch (err) {
+      res.status(403).json({error:err.message});
+    }
+
+})
 
 //refreshing the token
 

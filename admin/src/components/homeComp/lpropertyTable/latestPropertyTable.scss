@@ -1,0 +1,68 @@
+@import "../../../sass/main.scss";
+.cellwithimg{
+    display: flex;
+    align-items: center;
+    gap:2rem;
+    img{
+        width:5rem;
+    height: 5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    }
+    .left{
+
+    }
+    .right{
+        display: flex;
+        flex-direction: column;
+
+        .top{
+            font-size:1.5rem;
+            font-weight: bold;
+            color:white;
+        }
+        .bottom{
+            font-size:1.3rem;
+            color:grey;
+        }
+    }
+}
+
+.latestPropertyTable{
+    
+    .list{
+        
+        .table{
+            background-color: $bodyColor;
+            
+            .tableHeadP{
+                width:100%;
+                border-bottom: 2px solid $borderGrey;
+
+                .tableCell{
+                    border:none;
+                }
+                .heading{
+                    font-size:1.4rem;
+                    color:white;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+            }
+
+            .tableRowC{
+
+                &:hover{
+                    background-color: $altBodyColor;
+                }
+                .tableCell{
+                    border-bottom:.3px solid $borderGrey;
+                    font-size:1.4rem;
+                    color:rgb(156, 155, 155);
+                }
+            }
+
+        }
+    }
+}

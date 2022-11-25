@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect} from "react";
 import "./settings.scss";
 import LoginContext from "../../components/context/auth/loginContext/LoginContext";
 import Nav from "../../components/nav/NavTop";
@@ -24,7 +24,7 @@ import Notification from "../../components/settingspageComp/notification/Notific
 import Alert from "../../components/alerts/Alert";
 import AlertContext from "../../components/context/alerts/AlertContext";
 function Settings() {
-  const [resourceType, setResourceType] = useState("userInfo");
+  const [resourceType, setResourceType] = useState(JSON.parse(localStorage.getItem("page")) || "userInfo");
   const { state } = useContext(LoginContext);
   const {setAlert} = useContext(AlertContext)
   const [form, setForm] = useState([]);
@@ -35,6 +35,9 @@ function Settings() {
     });
   };
 
+  useEffect(()=>{
+    localStorage.setItem("page",JSON.stringify(resourceType))
+},[resourceType])
   let passwordErr;
   if (form.password !== form.passwordRpt) {
     passwordErr = (
@@ -167,9 +170,7 @@ function Settings() {
           )}
           {resourceType === "notifications" && (
             <>
-            <div><Notification /></div>
-            <div><Notification /></div>
-            <div><Notification /></div>
+            <div><Notification id={id} /></div>
             </>
           )}
         </section>

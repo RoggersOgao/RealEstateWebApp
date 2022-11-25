@@ -11,7 +11,7 @@ app.use(cors())
 const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
 const listingRoute = require("./routes/listings");
-// const categoryRoute = require("./routes/categories")
+const messageRoute = require("./routes/messages")
 
 
 dotenv.config();
@@ -92,7 +92,7 @@ const upload = multer({storage:storage, fileFilter:filefilter, limits:limit}).ar
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/listings", listingRoute);
-// app.use("/api/categories",categoryRoute);
+app.use("/api/messages",messageRoute);
 
 app.listen("5003", () => {
   console.log("Backend is running.");

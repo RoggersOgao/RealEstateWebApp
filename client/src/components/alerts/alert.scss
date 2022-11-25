@@ -1,9 +1,9 @@
 .alertContainer{
 animation: moveInRight 1s ease-in-out;
     .alertError{
-        position:absolute;
+        position:fixed;
         right:0;
-        top:5rem;
+        top:10%;
         padding:2rem;
         // width:20rem;
         min-height: 4rem;
@@ -25,9 +25,9 @@ animation: moveInRight 1s ease-in-out;
 
 
     .alertSuccess{
-        position:absolute;
+        position:fixed;
         right:0;
-        top:5rem;
+        top:10%;
         padding:2rem 0;
         width:20rem;
         height: 4rem;

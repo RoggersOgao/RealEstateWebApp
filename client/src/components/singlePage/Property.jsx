@@ -19,6 +19,8 @@ function Property({ property }) {
     description,
     features,
     img,
+    userId,
+    _id,
     rating,
     price,
     username,
@@ -54,8 +56,8 @@ function Property({ property }) {
                 />
       <FaAngleRight className="iconRight" onClick={handleClick} />
       {img.map((item, index) => (
-      <>
-          <div className={index === currentSlide ? "slide current": "slide"} key={index}>
+      <div key={index}>
+          <div className={index === currentSlide ? "slide current": "slide"}>
             {index === currentSlide && (
               <div className="item">
                 <img src={IL + item} alt="" />
@@ -63,7 +65,7 @@ function Property({ property }) {
               )
             }
           </div>
-      </>
+      </div>
     ))}
       
       </div>
@@ -219,6 +221,8 @@ area
         description={description}
         features={features}
         img={img}
+        userId={userId}
+        _id={_id}
         rating={rating}
         price={price}
         username={username}

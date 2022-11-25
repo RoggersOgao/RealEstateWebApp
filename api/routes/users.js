@@ -86,11 +86,15 @@ router.get("/:id", async (req, res) => {
 
 router.get("/", async (req, res) => {
   const username = req.query.user;
+  const email = req.query.e;
   try {
     let users;
     if (username) {
       users = await User.find({ username });
-    } else {
+    }else if(email){
+      users = await User.find({email: email})
+    }
+     else {
       users = await User.find();
     }
     res.status(200).json(users);

@@ -21,15 +21,46 @@
 
     .form{
 padding:3rem;
-        .formgroup{
 
+.radiGroup{
+    display: flex;
+    justify-content: center;
+    gap:2rem;
+    .formgroup{
+
+        input[type='radio']{
+            display:none;
+        }
+
+        label{
+            width:4rem;
+            height: 4rem;
+            border-radius: 50%;
+            background-color: grey;
+            color:white;
+            font-weight: bold;
+            font-size: 1.5rem;
             display: flex;
             align-items: center;
+            justify-content: center;
+        }
+
+        input[type='radio']:checked~label{
+            background-color: $primaryColor;
+        }
+
+    }
+}
+        .formgroup{
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             gap:2rem;
             &__left{
                 img{
-                    width:4rem;
-                    height: 4rem;
+                    width:6rem;
+                    height: 6rem;
                     border-radius: 50%;
                 }
 
@@ -52,6 +83,7 @@ padding:3rem;
                 flex-direction: column;
                 width: 100%;
                 input{
+                    margin-top: 2rem;
                     border: none;
                     border-bottom: 1px solid $lightGrey;
                     width:70%;

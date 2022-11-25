@@ -1,0 +1,111 @@
+@import "../../sass/main.scss";
+.sidenav{
+    height: calc(100vh - 5rem);
+    border-right: .3px solid $borderGrey;
+    width:5rem;
+    background-color: $bodyColor;
+    position: sticky;
+    top:5rem;
+    &__container{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap:2rem;
+        font-size:2.5rem;
+        justify-content: center;
+        padding:.2rem 1rem;
+
+        .homeGroup{
+            position: relative;
+            .text{
+                background-color: rgb(52, 52, 52);
+                color:rgb(198, 198, 198);
+                font-weight: 400;
+                position: absolute;
+                right:-6.9rem;
+                z-index:3;
+                top:50%;
+                transform: translateY(-58%);
+                padding:.5rem 1rem;
+                border-radius: 4px;
+                font-size:1.2rem;
+            }
+        }
+        .propertyGroup{
+            position: relative;
+            .text{
+                background-color: rgb(52, 52, 52);
+                color:rgb(198, 198, 198);
+                font-weight: 400;
+                position: absolute;
+                right:-8.3rem;
+                z-index:3;
+                top:50%;
+                transform: translateY(-58%);
+                padding:.5rem 1rem;
+                border-radius: 4px;
+                font-size:1.2rem;
+            }
+        }
+        .users{
+            position: relative;
+            .text{
+                background-color: rgb(52, 52, 52);
+                color:rgb(198, 198, 198);
+                font-weight: 400;
+                position: absolute;
+                right:-6.5rem;
+                z-index:3;
+                top:50%;
+                transform: translateY(-58%);
+                padding:.5rem 1rem;
+                border-radius: 4px;
+                font-size:1.2rem;
+            }
+        }
+        .settingsGroup{
+            position: relative;
+            .text{
+                background-color: rgb(52, 52, 52);
+                color:rgb(198, 198, 198);
+                font-weight: 400;
+                position: absolute;
+                right:-8.2rem;
+                z-index:3;
+                top:50%;
+                transform: translateY(-58%);
+                padding:.5rem 1rem;
+                border-radius: 4px;
+                font-size:1.2rem;
+            }
+        }
+        .logoutGroup{
+            position: relative;
+            .text{
+                background-color: rgb(52, 52, 52);
+                color:rgb(198, 198, 198);
+                font-weight: 400;
+                position: absolute;
+                right:-7.4rem;
+                z-index:3;
+                top:50%;
+                transform: translateY(-58%);
+                padding:.5rem 1rem;
+                border-radius: 4px;
+                font-size:1.2rem;
+            }
+        }
+.link{
+    cursor: pointer;
+    .icons{
+        color:rgb(103, 103, 103);
+        transition: color .2s ease-in-out;
+        &:hover{
+            color:rgb(255, 255, 255);
+        }
+    }
+
+}
+        
+    }
+}
