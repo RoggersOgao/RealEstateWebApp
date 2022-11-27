@@ -8,6 +8,8 @@ import Settings from "./pages/settings/Settings";
 import MessagePage from "./components/settingspageComp/notification/messagePage/MessagePage";
 import Users from "./pages/users/Users";
 import Properties from "./pages/properties/Properties";
+import EditProperty from "./pages/properties/editProperty/EditProperty";
+import EditUsers from "./pages/users/editUsers/EditUsers";
 
 function App() {
   const {state} = useContext(LoginContext)
@@ -27,6 +29,8 @@ if(state.user === null){
       <Route path="/settings" element={ user ? <Settings /> : <Login />} />
       <Route path="/users" element={ user ? <Users /> : <Login />} />
       <Route path="/properties" element={ user ? <Properties /> : <Login />} />
+      <Route path="/properties/p_ed/" element={ user ? <EditProperty /> : <Login />} />
+      <Route path="/users/u_ed" element={ user ? <EditUsers /> : <Login />} />
       <Route path="/messages/vm/:msgId" element={user ? <MessagePage /> : <Login />} />
       </Routes>
     </div>

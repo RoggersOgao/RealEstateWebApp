@@ -1,8 +1,8 @@
 @import "../../../sass/main.scss";
 
 .skeletonCard{
-    width:15rem;
-    height: 5rem;
+    width:19.5rem;
+    height: 8.5rem;
     background-color: $borderGrey;
     animation:Skeletonblink 2s ease-in-out infinite alternate;
 }

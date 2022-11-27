@@ -16,6 +16,12 @@ const LoginReducer = (state, action) => {
                 ...state,
                 allUsers:action.payload
             }
+        case "EDIT_USER":
+            return{
+                ...state,
+                editUser:action.payload,
+                edit:true,
+            }
         case "LOGOUT":
             return{
                 user:null

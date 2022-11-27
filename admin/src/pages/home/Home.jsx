@@ -102,7 +102,7 @@ function Home() {
                     </div>
                     </div>
                     <div className="button">
-                    <Link to='/' className='link'><button>List Users</button></Link>
+                    <Link to='/users' className='link'><button>List Users</button></Link>
                     
                     </div>
                   </div>
@@ -127,7 +127,7 @@ function Home() {
                     </div>
                   </div>
                   <div className="button">
-                  <Link to="/" className="link"><button>  Get Started</button></Link>
+                  <Link to="/properties" className="link"><button>  Get Started</button></Link>
                   </div>
                 </div>
               </div>

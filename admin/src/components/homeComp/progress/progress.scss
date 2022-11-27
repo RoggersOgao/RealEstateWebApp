@@ -40,6 +40,16 @@
             width:100%;
             margin: 3rem 0;
             font-weight: bold;
+
+            .usersAmountLoading{
+                .dot{
+                    width:1rem;
+                    height: 1rem;
+                    background-color: rgb(255, 255, 255);
+                    animation:moveLeft 2s ease-in-out infinite alternate;
+                    border-radius: 50%;
+                }
+            }
         }
         &--title{
             

@@ -22,6 +22,12 @@ const ListingReducer = (state, action) => {
                 ...state,
                 userProperties:action.payload
             }
+        case "EDIT_PROPERTY":
+            return {
+                ...state,
+                editListingItem:action.payload,
+                edit:true
+            }
             default:
             return state
     }

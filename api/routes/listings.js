@@ -72,7 +72,7 @@ router.post("/", verify, async (req, res) => {
 router.put("/:id", verify, async (req, res) => {
   try {
     const listing = await Listing.findById(req.params.id);
-    if (req.user.id === req.body.id || req.user.isAdmin) {
+    if (req.user.id === req.body.userId || req.user.isAdmin) {
       try {
         const updatedListing = await Listing.findByIdAndUpdate(
           req.params.id,

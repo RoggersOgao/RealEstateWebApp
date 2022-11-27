@@ -39,3 +39,13 @@ export  const searchProperty = async (text) => {
   
 }
 
+
+// handle Edit function
+
+export const handleEdit = (item) => {
+    const newProperty = {
+        item,
+        edit: true
+    }
+    return newProperty
+}
