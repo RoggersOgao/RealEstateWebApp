@@ -1,5 +1,5 @@
 import React,{useEffect, useContext, useState} from 'react'
-import { DataGrid } from '@mui/x-data-grid';
+import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 import { FaEdit, FaTrashAlt } from 'react-icons/fa';
 // import userRows from '../../../data';
 import { propertyColumns } from '../../../data';
@@ -81,6 +81,9 @@ function PropertiesDatatable() {
         getRowId={(row) => row._id}
         pageSize={5}
         rowsPerPageOptions={[5]}
+        {...properties}
+        loading={loading}
+        components={{ Toolbar: GridToolbar }}
         checkboxSelection
       />
     </div>
